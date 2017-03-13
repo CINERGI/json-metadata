@@ -1,0 +1,61 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "comment": "",
+    "@context": {
+        "jmd": "http://resources.usgin.org/uri-gin/usgin/schema/json/3.1/metadata",
+        "@vocab": "http://json-schema.org/draft-04/schema",
+        "@base": "http://resources.usgin.org/uri-gin/usgin/schema/json/3.1/metadata",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "dct": "http://purl.org/dc/terms/",
+        "skos": "http://www.w3.org/2004/02/skos/core#"
+    },
+    "description": "Information about the maintenance plan and schedule for a resource. If the resource is updated, a process step in Lineage should be added",
+    "skos:HistoryNote": "",
+    "version": "3.1",
+    "dct:identifier": "http://resources.usgin.org/uri-gin/usgin/schema/json-metadata/3.0/Maintenance",
+    "type": "object",
+    "translation": {
+        "ISO 19115-2": [""],
+        "FGDC CSDGM": [""],
+        "ISO 19115": [""],
+        "ISO 19115-3": [""]
+    },
+    "anyOf": [{
+            "required": ["jmd:maintenanceNote"]
+						}, {
+            "required": ["jmd:maintenanceInterval"]
+						}, {
+            "required": ["jmd:maintenanceFrequency"]
+						}
+					],
+    "properties": {
+        "jmd:maintenanceContacts": {
+            "description": "contact information for the agent responsible for maintenance of the resource",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/jmd:contactRef"
+            }
+        },
+        "jmd:maintenanceNote": {
+            "type": "string",
+            "description": "free text information about maintenance plans, workflow, process...note that individual maintenance events shuold be recorded in the resource Lineage (if they affect the described resource) or in the metadata history (if they affect the metadata record."
+        },
+        "jmd:maintenanceInterval": {
+            "type": "string",
+            "description": "time interval between planned maintenance events e.g. 6 months"
+        },
+        "jmd:maintenanceFrequency": {
+            "translation": {
+                "ISO19115": ["gmd:maintenanceAndUpdateFrequency/gmd:MD_MaintenanceFrequencyCode/@codeListValue"]
+
+            },
+            "$ref": "#/definitions/jmd:ControlledConceptObject"
+
+        },
+        "jmd:dateNextUpdate": {
+            "type": "string",
+            "description": "datetime of next expected resource update",
+            "$ref": "#/definitions/jmd:DateObject"
+        }
+    }
+}
