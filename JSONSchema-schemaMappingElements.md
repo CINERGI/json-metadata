@@ -80,7 +80,7 @@ This array of mapping objects in this search_paths key indicate that:
                                 "path": "./gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue"}
                                 ]
                     },...
-    ```
+```
 
 this section of JSON schema defines a ```jmd:metadataContacts``` key. There is no corresponding content in DataCite metadata, so in that case, no ```jmd:metadataContacts``` key would be generated on mapping. For ISO metadata, if a ```//gmd:contact``` element is present (could be either ```gmd:MD_Metadata/gmd:contact``` or ```gmi:MI_Metadata/gmd:contact```) then a ```jmd:metadataContacts``` key is generated with a value that is an array of JSON objects. The first key in the first JSON object in the array in the contained JSON object is 'jmd:conceptPrefLabel' that has a string value. The xpath ```./gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue``` locates the value in the source document; the './' notation indicates that this is a path relative to the current context node, in this case the current ```gmd:contact```. 
 
