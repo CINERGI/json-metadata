@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "comment": "",
+    "@context": {
+        "jmd": "http://resources.usgin.org/uri-gin/usgin/schema/json/3.1/metadata",
+        "@vocab": "http://json-schema.org/draft-04/schema",
+        "@base": "http://resources.usgin.org/uri-gin/usgin/schema/json/3.1/metadata",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "dct": "http://purl.org/dc/terms/",
+        "skos": "http://www.w3.org/2004/02/skos/core#"
+    },
+    "description": "",
+    "skos:HistoryNote": "",
+    "version": "3.1",
+    "dct:identifier": "http://resources.usgin.org/uri-gin/usgin/schema/json/3.1/metadata",
+    "type": "object",
+    "translation": {
+        "ISO 19115-2": [""],
+        "FGDC CSDGM": [""],
+        "ISO 19115": [""],
+        "ISO 19115-3": [""]
+    },
+    "required": [""
+	],
+    "properties": {}
+}

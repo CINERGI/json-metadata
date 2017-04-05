@@ -1,0 +1,1544 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "DATS Dataset Schema",
+    "description": "A set of dimensions about an entity being observed. A collection of data, published or curated by a single agent, and available for access or download in one or more formats (from DCAT: http://www.w3.org/TR/vocab-dcat/#Class:_Dataset). A body of structured information describing some topic(s) of interest (from: http://schema.org/Dataset). [SMRnote: comments and discussion on elements are indicated by [SMRnote: ] in brackets, like this comment.]. [SMRnote: general comments. Extensive use of annotation object seems problematic--its used lots of places where a string value would be required, and what's the point  of a value IRI on a numeric value??.  ]",
+    "type": "object",
+    "properties": {
+        "@context": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "object"
+                }
+            ]
+        },
+        "@type": {
+            "type": "string",
+            "enum": ["Dataset"]
+        },
+        "identifier": {
+            "type": "object",
+            "properties": {
+                "identifier": {
+                    "description": "A code uniquely identifying an entity locally to a system or globally.",
+                    "type": "string",
+                    "format": "uri"
+                },
+                "identifierSource": {
+                    "description": "The identifier source represents information about the organisation/namespace responsible for minting the identifiers. It must be provided if the identifier is provided.",
+                    "type": "string"
+                }
+
+            }
+        },
+        "alternateIdentifiers": {
+            "description": "Alternate identifiers for the dataset.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "identifier": {
+                        "description": "A code uniquely identifying an entity locally to a system or globally.",
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "identifierSource": {
+                        "description": "The identifier source represents information about the organisation/namespace responsible for minting the identifiers. It must be provided if the identifier is provided.",
+                        "type": "string"
+                    }
+
+                }
+            }
+        },
+        "relatedIdentifiers": {
+            "description": "Related identifiers for the dataset. [SMRnote: seems like it would clearer if this key was named 'relatedResources', and the dataType was a LinkObject; at least there should be a 'label' key or something both for the target resource and the relType for use in user interface]",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "identifier": {
+                        "description": "A code uniquely identifying an entity locally to a system or globally.",
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "identifierSource": {
+                        "description": "The identifier source represents information about the organisation/namespace responsible for minting the identifiers. It must be provided if the identifier is provided.",
+                        "type": "string"
+                    },
+                    "relationType": {
+                        "description": "The type of the relationship corresponding to this identifier.",
+                        "type": "string",
+                        "format": "uri"
+                    }
+                }
+            }
+        },
+        "title": {
+            "description": "The name of the dataset, usually one sentece or short description of the dataset.",
+            "type": "string"
+        },
+        "description": {
+            "description": "A textual narrative comprised of one or more statements describing the dataset.",
+            "type": "string"
+        },
+        "dates": {
+            "description": "Relevant dates for the datasets, a date must be added, e.g. creation date or last modification date should be added.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "date": {
+                        "description": "A date following the ISO8601 standard.",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "type": {
+                        "description": "The type of date, used to specify the process which is being timestamped by the date attribute value, ideally comes from a controlled terminology.",
+                        "type": "object",
+                        "properties": {
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "valueIRI": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+                    }
+                },
+                "required": ["date", "type"]
+            }
+        },
+        "types": {
+            "description": "A term, ideally from a controlled terminology, identifying the dataset type or nature of the data, placing it in a typology [SMRnote: The value is of type data_type, not a term; need a resourceType property. the 'aggregation' key accounts for one dimension of resource categorization-unit or collection. Why is acquisition information (method, platform, instrument) here? seems out of place. This property should categorize the resource in some scheme that standardized for a particular catalog or community.  In the example documents, types appears mostly to be use for theme-type keywords.]",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "information": {
+                        "description": "The measurements or facts that the data is about.",
+                        "type": "object",
+                        "properties": {
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "valueIRI": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+                    },
+                    "method": {
+                        "description": "The procedure or technology used to generate the information.",
+                        "type": "object",
+                        "properties": {
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "valueIRI": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+
+                    },
+                    "platform": {
+                        "description": "The set of instruments, software and reagents that are needed to generated the data.",
+                        "type": "object",
+                        "properties": {
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "valueIRI": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+
+                    },
+                    "instrument": {
+                        "description": "The specific device used to generate the data.",
+                        "type": "object",
+                        "properties": {
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "valueIRI": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+
+                    }
+                }
+            },
+            "minItems": 1
+        },
+        "availability": {
+            "description": "A qualifier indicating the different types of availability for a dataset (available, unavailable, embargoed, available with restriction, information not available).",
+            "type": "string"
+        },
+        "refinement": {
+            "description": "A qualifier to describe the level of data processing of the dataset and its distributions. [SMRnote: NASA processing level]",
+            "type": "string"
+        },
+        "aggregation": {
+            "description": "A qualifier indicating if the entity represents an 'instance of dataset' or a 'collection of datasets'.[SMRnote: this should be handled by the 'type' information.]",
+            "type": "string"
+        },
+        "privacy": {
+            "description": "A qualifier to describe the data protection applied to the dataset. This is relevant for clinical data. [SMRnote: seems to overlap with 'licenses']",
+            "type": "string"
+        },
+        "distributions": {
+            "description": "The distribution(s) by which datasets are made available (for example: mySQL dump).",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "identifier": {
+                        "type": "object",
+                        "properties": {
+                            "identifier": {
+                                "description": "A code uniquely identifying an entity locally to a system or globally.",
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "identifierSource": {
+                                "description": "The identifier source represents information about the organisation/namespace responsible for minting the identifiers. It must be provided if the identifier is provided.",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "alternateIdentifiers": {
+                        "description": "Alternate identifiers for the dataset distribution.",
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "identifier": {
+                                    "description": "A code uniquely identifying an entity locally to a system or globally.",
+                                    "type": "string",
+                                    "format": "uri"
+                                },
+                                "identifierSource": {
+                                    "description": "The identifier source represents information about the organisation/namespace responsible for minting the identifiers. It must be provided if the identifier is provided.",
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "relatedIdentifiers": {
+                        "description": "Related identifiers for the dataset distribution.",
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "identifier": {
+                                    "description": "A code uniquely identifying an entity locally to a system or globally.",
+                                    "type": "string",
+                                    "format": "uri"
+                                },
+                                "identifierSource": {
+                                    "description": "The identifier source represents information about the organisation/namespace responsible for minting the identifiers. It must be provided if the identifier is provided.",
+                                    "type": "string"
+                                },
+                                "relationType": {
+                                    "description": "The type of the relationship corresponding to this identifier.",
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+
+                            }
+
+                        }
+                    },
+                    "title": {
+                        "description": "The name of the dataset, usually one sentece or short description of the dataset.",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "A textual narrative comprised of one or more statements describing the dataset distribution.",
+                        "type": "string"
+                    },
+                    "storedIn": {
+                        "description": "The data repository hosting the dataset distribution. [SMRnote-- ISO distributor, or identificationInfo/PointOfContact?]",
+                        "type": "object",
+                        "properties": {
+                            "identifier": {
+                                "$ref": "identifier_info_schema.json#"
+                            },
+                            "alternateIdentifiers": {
+                                "description": "Alternate identifiers for the data repository.",
+                                "type": "array",
+                                "items": {
+                                    "$ref": "alternate_identifier_info_schema.json#"
+                                }
+                            },
+                            "relatedIdentifiers": {
+                                "description": "Related identifiers for the data repository.",
+                                "type": "array",
+                                "items": {
+                                    "$ref": "related_identifier_info_schema.json#"
+                                }
+                            },
+                            "name": {
+                                "description": "The name of the data repository.",
+                                "type": "string"
+                            },
+                            "description": {
+                                "description": "A textual narrative comprised of one or more statements describing the data repository.",
+                                "type": "string"
+                            },
+                            "dates": {
+                                "description": "Relevant dates for the data repository.",
+                                "type": "array",
+                                "items": {
+                                    "$ref": "date_info_schema.json#"
+                                }
+                            },
+                            "scopes": {
+                                "description": "Information about the nature of the datasets in the repository, ideally from a controlled vocabulary or ontology (e.g. transcription profile, sequence reads, molecular structure, image, DNA sequence, NMR spectra).",
+                                "type": "array",
+                                "items": {
+                                    "$ref": "annotation_schema.json#"
+                                }
+                            },
+                            "types": {
+                                "description": "A descriptor (ideally from a controlled vocabulary) providing information about the type of repository, such as primary resource or aggregator.",
+                                "type": "array",
+                                "items": {
+                                    "$ref": "annotation_schema.json#"
+                                }
+                            },
+                            "licenses": {
+                                "description": "The terms of use of the data repository. [SMRnote: duplicative with '#licenses' key]",
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "identifier": {
+                                            "$ref": "identifier_info_schema.json#"
+                                        },
+                                        "alternateIdentifiers": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "alternate_identifier_info_schema.json#"
+                                            }
+                                        },
+                                        "relatedIdentifiers": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "related_identifier_info_schema.json#"
+                                            }
+                                        },
+                                        "name": {
+                                            "description": "The name of the license.",
+                                            "type": "string"
+                                        },
+                                        "version": {
+                                            "description": "The version of the license.",
+                                            "type": "string"
+                                        },
+                                        "creators": {
+                                            "description": "The person(s) or organization(s) responsible for writing the license.",
+                                            "type": "array",
+                                            "items": {
+                                                "oneOf": [
+                                                    {
+                                                        "$ref": "person_schema.json#"
+                                        },
+                                                    {
+                                                        "$ref": "organization_schema.json#"
+                                        }
+        ]
+                                            },
+                                            "minItems": 1
+                                        },
+                                        "extraProperties": {
+                                            "description": "Extra properties that do not fit in the previous specified attributes. ",
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "@context": {
+                                                        "anyOf": [
+                                                            {
+                                                                "type": "string"
+        },
+                                                            {
+                                                                "type": "object"
+        }
+      ]
+                                                    },
+                                                    "@type": {
+                                                        "type": "string",
+                                                        "enum": ["CategoryValuesPair"]
+                                                    },
+                                                    "category": {
+                                                        "description": "A characteristic or property about the entity this object is associated with.",
+                                                        "type": "string"
+                                                    },
+                                                    "categoryIRI": {
+                                                        "description": "The IRI corresponding to the category, if associated with an ontology term.",
+                                                        "type": "string",
+                                                        "format": "uri"
+                                                    },
+                                                    "values": {
+                                                        "description": "A set of (annotated) values associated with the cateogory.",
+                                                        "type": "array",
+                                                        "items": {
+                                                            "items": {
+                                                                "$ref": "annotation_schema.json#"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "additionalProperties": false
+                                            }
+                                        }
+                                    },
+                                    "required": ["name"]
+                                }
+                            },
+                            "version": {
+                                "description": "A release point for the repository, when applicable.",
+                                "type": "string"
+                            },
+                            "publishers": {
+                                "description": "The person(s) or organization(s) responsible for the repository and its availability.[SMRnote: ISO distributor]",
+                                "type": "array",
+                                "items": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "person_schema.json#"
+                                          },
+                                        {
+                                            "$ref": "organization_schema.json#"
+                                          }
+                                        ]
+                                }
+                            },
+                            "aggregatorOf": {
+                                "description": "The DataRepositories aggregated by this repository. This property will be empty for primary repositories. [SMRnote: this is a relatedResource]",
+                                "type": "array",
+                                "items": {
+                                    "$ref": "data_repository_schema.json#"
+                                }
+                            },
+                            "access": {
+                                "description": "The information about access modality for the data repository. [SMRnote: this is access to repository, not access to the resource that is the subject of the metadata; shouldn't the distributor contact inforamtion account for this? duplicates #distributions.access key]",
+                                "type" : "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "@context": {
+                                            "anyOf": [
+                                                {
+                                                    "type": "string"
+                                                    },
+                                                {
+                                                    "type": "object"
+                                                    }
+                                                  ]
+                                        },
+                                        "@type": {
+                                            "type": "string",
+                                            "enum": ["Access"]
+                                        },
+                                        "identifier": {
+                                            "$ref": "identifier_info_schema.json#"
+                                        },
+                                        "alternateIdentifiers": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "alternate_identifier_info_schema.json#"
+                                            }
+                                        },
+                                        "relatedIdentifiers": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "related_identifier_info_schema.json#"
+                                            }
+                                        },
+                                        "landingPage": {
+                                            "description": "A web page that contains information about the associated dataset or other research object and a direct link to the object itself. [SMRnote--this is inside access information for a repository, so is this the landing page for the resource described by this md record, or for the repository?]",
+                                            "type": "string",
+                                            "format": "uri"
+                                        },
+                                        "accessURL": {
+                                            "description": "A URL from which the resource (dataset or other research object) can be retrieved, i.e. a direct link to the object itself.",
+                                            "type": "string",
+                                            "format": "uri"
+                                        },
+                                        "types": {
+                                            "description": "Method to obtain the resource, ideally specified from a controlled vocabulary or ontology.",
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "annotation_schema.json#"
+                                            }
+                                        },
+                                        "authorizations": {
+                                            "description": "Types of verification that accessing the resource is allowed. Authorization occurs before successful authentication and refers to the process of obtaining approval to use a data set. Ideally specified from a controlled vocabulary or ontology.",
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "annotation_schema.json#"
+                                            }
+                                        },
+                                        "authentications": {
+                                            "description": "Types of verification of the credentials for accessing the resource, it is the identification process at the time of access. ideally specified from a controlled vocabulary or ontology.",
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "annotation_schema.json#"
+                                            }
+                                        },
+                                        "extraProperties": {
+                                            "description": "Extra properties that do not fit in the previous specified attributes. ",
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "category_values_pair_schema.json#"
+                                            }
+                                        }
+                                    },
+                                    "additionalProperties": false,
+                                    "required": ["landingPage"]
+                                }
+                            },
+                            "extraProperties": {
+                                "description": "Extra properties that do not fit in the previous specified attributes. ",
+                                "type": "array",
+                                "items": {
+                                    "$ref": "category_values_pair_schema.json#"
+                                }
+                            }
+                        }
+                    },
+                    "dates": {
+                        "description": "Relevant dates for the datasets, e.g. creation date or last modification date may be added.",
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "date": {
+                                    "description": "A date following the ISO8601 standard.",
+                                    "type": "string",
+                                    "format": "date-time"
+                                },
+                                "type": {
+                                    "description": "The type of date, used to specify the process which is being timestamped by the date attribute value, ideally comes from a controlled terminology. [SMRnote: doesn't using the same key name as one of the JSON schema reserved values 'type' cause problems?]",
+                                    "type": "object",
+                                    "properties": {
+                                        "value": {
+                                            "oneOf": [
+                                                {
+                                                    "type": "string"
+                                    },
+                                                {
+                                                    "type": "number"
+                                    }
+                                ]
+                                        },
+                                        "valueIRI": {
+                                            "type": "string",
+                                            "format": "uri"
+                                        }
+                                    }
+                                }
+                            },
+                            "required": ["date", "type"]
+                        }
+                    },
+                    "version": {
+                        "description": "A release point for the dataset when applicable.",
+                        "type": "string"
+                    },
+                    "licenses": {
+                        "description": "The terms of use of the dataset distribution.",
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "identifier": {
+                                    "$ref": "identifier_info_schema.json#"
+                                },
+                                "alternateIdentifiers": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "alternate_identifier_info_schema.json#"
+                                    }
+                                },
+                                "relatedIdentifiers": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "related_identifier_info_schema.json#"
+                                    }
+                                },
+                                "name": {
+                                    "description": "The name of the license.",
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "description": "The version of the license.",
+                                    "type": "string"
+                                },
+                                "creators": {
+                                    "description": "The person(s) or organization(s) responsible for writing the license.",
+                                    "type": "array",
+                                    "items": {
+                                        "oneOf": [
+                                            {
+                                                "$ref": "person_schema.json#"
+                                        },
+                                            {
+                                                "$ref": "organization_schema.json#"
+                                        }
+        ]
+                                    },
+                                    "minItems": 1
+                                },
+                                "extraProperties": {
+                                    "description": "Extra properties that do not fit in the previous specified attributes. ",
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "category_values_pair_schema.json#"
+                                    }
+                                }
+                            },
+                            "required": ["name"]
+                        }
+                    }
+                },
+                "access": {
+                    "description": "The information about access modality for the dataset distribution.",
+                    "$ref": "access_schema.json#"
+                },
+                "curationStatus": {
+                    "description": "The level of curation of the dataset distribution.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "annotation_schema.json#"
+                    }
+                },
+                "conformsTo": {
+                    "description": "A data standard whose requirements and constraints are met by the dataset.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "data_standard_schema.json#"
+                    }
+                },
+                "qualifiers": {
+                    "description": "One or more characteristics of the dataset distribution (e.g. how it relates to other distributions, if the data is raw or processed, compressed or encrypted). [SMRnote-- how do you determine what goes here as opposed to in #distributions.extraProperties??]",
+                    "type": "array",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "$ref": "annotation_schema.json#"
+                            },
+                            {
+                                "$ref": "category_values_pair_schema.json#"
+                            }
+        ]
+                    }
+                },
+                "formats": {
+                    "description": "The technical format of the dataset distribution. Use the file extension or MIME type when possible. (Definition adapted from DataCite). [SMRnote: how to deal with files that are bundled in a tar or zip? Isn't the format implicit in the 'conformsTo' key value?]",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "size": {
+                    "description": "The size of the dataset.",
+                    "type": "number"
+                },
+                "unit": {
+                    "description": "The unit of measurement used to estimate the size of the dataset (e.g, petabyte). Ideally, the unit should be coming from a reference controlled terminology.",
+                    "$ref": "annotation_schema.json#"
+                },
+                "extraProperties": {
+                    "description": "Extra properties that do not fit in the previous specified attributes. ",
+                    "type": "array",
+                    "items": {
+                        "$ref": "category_values_pair_schema.json#"
+                    }
+                }
+            }
+        },
+        "dimensions": {
+            "description": "The different dimensions (granular components)  making up a dataset. DataType is Dimension",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "identifier": {
+                        "$ref": "identifier_info_schema.json#"
+                    },
+                    "alternateIdentifiers": {
+                        "description": "Alternate identifiers for the dimension.",
+                        "type": "array",
+                        "items": {
+                            "$ref": "alternate_identifier_info_schema.json#"
+                        }
+                    },
+                    "relatedIdentifiers": {
+                        "description": "Related identifiers for the dimension.",
+                        "type": "array",
+                        "items": {
+                            "$ref": "related_identifier_info_schema.json#"
+                        }
+                    },
+                    "name": {
+                        "description": "The name of the dimension measured or observed during the data acquisition process, ideally from a controlled terminology.",
+                        "$ref": "annotation_schema.json#"
+                    },
+                    "description": {
+                        "description": "A textual narrative comprised of one or more statements describing the dimension.",
+                        "type": "string"
+                    },
+                    "types": {
+                        "description": "A term, ideally from a controlled terminology, identifying the nature of the dimension, placing it in a typology.",
+                        "type": "array",
+                        "items": {
+                            "$ref": "annotation_schema.json#"
+                        }
+                    },
+                    "values": {
+                        "description": "The actual collections of values collected for that dimension.",
+                        "type": "array"
+                    },
+                    "unit": {
+                        "description": "A reference measurement unit associated with scalar dimensions, ideally from a reference controlled terminology.",
+                        "$ref": "annotation_schema.json#"
+                    },
+                    "isAbout": {
+                        "description": "A material or a dataset, which is the object of this dimension (this dimension is about the material - e.g. the heights of the patients - or the dataset - e.g. the standard deviation or the set of outliers or a quality indicator of a dataset). [SMRnote: this is a related resource relType]",
+                        "type": "array",
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "$ref": "material_schema.json#"
+                                },
+                                {
+                                    "$ref": "dataset_schema.json#"
+                                }
+        ]
+                        }
+                    },
+                    "partOf": {
+                        "description": "The dataset(s) this dimension belongs to.[SMRnote: this is a related resource relType]",
+                        "type": "array",
+                        "items": {
+                            "$ref": "dataset_schema.json#"
+                        }
+                    },
+                    "extraProperties": {
+                        "description": "Extra properties that do not fit in the previous specified attributes. ",
+                        "type": "array",
+                        "items": {
+                            "$ref": "category_values_pair_schema.json#"
+                        }
+                    }
+                },
+                "additionalProperties": false,
+                "required": ["name"]
+            }
+        },
+        "primaryPublications": {
+            "description": "The primary publication(s) associated with the dataset, usually describing how the dataset was produced. [SMRnote: this is a related resource relType]",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "identifier": {
+                        "$ref": "identifier_info_schema.json#"
+                    },
+                    "alternateIdentifiers": {
+                        "description": "Alternate identifiers for the publication.",
+                        "type": "array",
+                        "items": {
+                            "$ref": "alternate_identifier_info_schema.json#"
+                        }
+                    },
+                    "relatedIdentifiers": {
+                        "description": "Related identifiers for the publication.",
+                        "type": "array",
+                        "items": {
+                            "$ref": "related_identifier_info_schema.json#"
+                        }
+                    },
+                    "title": {
+                        "description": "The name of the publication, usually one sentece or short description of the publication.",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "Publication type, ideally delegated to an external vocabulary/resource.",
+                        "$ref": "annotation_schema.json#"
+                    },
+                    "publicationVenue": {
+                        "description": "The name of the publication venue where the document is published if applicable.",
+                        "type": "string"
+                    },
+                    "dates": {
+                        "description": "Relevant dates, the date of the publication must be provided.",
+                        "type": "array",
+                        "items": {
+                            "$ref": "date_info_schema.json#"
+                        }
+                    },
+                    "authors": {
+                        "description": "The person(s) and/or organisation(s) responsible for the publication.",
+                        "type": "array",
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "$ref": "person_schema.json#"
+                            },
+                                {
+                                    "$ref": "organization_schema.json#"
+                            }
+        ]
+                        },
+                        "minItems": 1
+                    },
+                    "authorsList": {
+                        "description": "The list of authors made available as a string (does not allow disambiguation).",
+                        "type": "string"
+                    },
+                    "acknowledges": {
+                        "description": "The grant(s) which funded and supported the work reported by the publication.",
+                        "type": "array",
+                        "items": {
+                            "$ref": "grant_schema.json#"
+                        }
+                    },
+                    "licenses": {
+                        "description": "The terms of use of the publication.",
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "identifier": {
+                                    "$ref": "identifier_info_schema.json#"
+                                },
+                                "alternateIdentifiers": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "alternate_identifier_info_schema.json#"
+                                    }
+                                },
+                                "relatedIdentifiers": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "related_identifier_info_schema.json#"
+                                    }
+                                },
+                                "name": {
+                                    "description": "The name of the license.",
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "description": "The version of the license.",
+                                    "type": "string"
+                                },
+                                "creators": {
+                                    "description": "The person(s) or organization(s) responsible for writing the license.",
+                                    "type": "array",
+                                    "items": {
+                                        "oneOf": [
+                                            {
+                                                "$ref": "person_schema.json#"
+                                        },
+                                            {
+                                                "$ref": "organization_schema.json#"
+                                        }
+        ]
+                                    },
+                                    "minItems": 1
+                                },
+                                "extraProperties": {
+                                    "description": "Extra properties that do not fit in the previous specified attributes. ",
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "category_values_pair_schema.json#"
+                                    }
+                                }
+                            },
+                            "required": ["name"]
+                        }
+                    },
+                    "extraProperties": {
+                        "description": "Extra properties that do not fit in the previous specified attributes. ",
+                        "type": "array",
+                        "items": {
+                            "$ref": "category_values_pair_schema.json#"
+                        }
+                    }
+                }
+            }
+        },
+        "citations": {
+            "description": "The publication(s) that cite this dataset. [SMRnote: this is a related resource relType]",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "identifier": {
+                        "$ref": "identifier_info_schema.json#"
+                    },
+                    "alternateIdentifiers": {
+                        "description": "Alternate identifiers for the publication.",
+                        "type": "array",
+                        "items": {
+                            "$ref": "alternate_identifier_info_schema.json#"
+                        }
+                    },
+                    "relatedIdentifiers": {
+                        "description": "Related identifiers for the publication.",
+                        "type": "array",
+                        "items": {
+                            "$ref": "related_identifier_info_schema.json#"
+                        }
+                    },
+                    "title": {
+                        "description": "The name of the publication, usually one sentece or short description of the publication.",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "Publication type, ideally delegated to an external vocabulary/resource.",
+                        "$ref": "annotation_schema.json#"
+                    },
+                    "publicationVenue": {
+                        "description": "The name of the publication venue where the document is published if applicable.",
+                        "type": "string"
+                    },
+                    "dates": {
+                        "description": "Relevant dates, the date of the publication must be provided.",
+                        "type": "array",
+                        "items": {
+                            "$ref": "date_info_schema.json#"
+                        }
+                    },
+                    "authors": {
+                        "description": "The person(s) and/or organisation(s) responsible for the publication.",
+                        "type": "array",
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "$ref": "person_schema.json#"
+                            },
+                                {
+                                    "$ref": "organization_schema.json#"
+                            }
+        ]
+                        },
+                        "minItems": 1
+                    },
+                    "authorsList": {
+                        "description": "The list of authors made available as a string (does not allow disambiguation).",
+                        "type": "string"
+                    },
+                    "acknowledges": {
+                        "description": "The grant(s) which funded and supported the work reported by the publication.",
+                        "type": "array",
+                        "items": {
+                            "$ref": "grant_schema.json#"
+                        }
+                    },
+                    "licenses": {
+                        "description": "The terms of use of the publication.",
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "identifier": {
+                                    "$ref": "identifier_info_schema.json#"
+                                },
+                                "alternateIdentifiers": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "alternate_identifier_info_schema.json#"
+                                    }
+                                },
+                                "relatedIdentifiers": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "related_identifier_info_schema.json#"
+                                    }
+                                },
+                                "name": {
+                                    "description": "The name of the license.",
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "description": "The version of the license.",
+                                    "type": "string"
+                                },
+                                "creators": {
+                                    "description": "The person(s) or organization(s) responsible for writing the license.",
+                                    "type": "array",
+                                    "items": {
+                                        "oneOf": [
+                                            {
+                                                "$ref": "person_schema.json#"
+                                        },
+                                            {
+                                                "$ref": "organization_schema.json#"
+                                        }
+        ]
+                                    },
+                                    "minItems": 1
+                                },
+                                "extraProperties": {
+                                    "description": "Extra properties that do not fit in the previous specified attributes. ",
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "category_values_pair_schema.json#"
+                                    }
+                                }
+                            },
+                            "required": ["name"]
+                        }
+                    },
+                    "extraProperties": {
+                        "description": "Extra properties that do not fit in the previous specified attributes. ",
+                        "type": "array",
+                        "items": {
+                            "$ref": "category_values_pair_schema.json#"
+                        }
+                    }
+                }
+            }
+        },
+        "citationCount": {
+            "description": "The number of publications that cite this dataset (enumerated in the citations property)",
+            "type": "integer"
+        },
+        "producedBy": {
+            "description": "A study process which generated a given dataset, if any. [SMRnote: this is a related resource relType]",
+            "type": "object",
+            "properties": {
+                "@context": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+        },
+                        {
+                            "type": "object"
+        }
+      ]
+                },
+                "@type": {
+                    "type": "string",
+                    "enum": ["Study"]
+                },
+                "identifier": {
+                    "$ref": "identifier_info_schema.json#"
+                },
+                "alternateIdentifiers": {
+                    "description": "Alternate identifiers for the activity.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "alternate_identifier_info_schema.json#"
+                    }
+                },
+                "relatedIdentifiers": {
+                    "description": "Related identifiers for the activity.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "related_identifier_info_schema.json#"
+                    }
+                },
+                "name": {
+                    "description": "The name of the activity, usually one sentece or short description of the study.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A textual narrative comprised of one or more statements describing the study.",
+                    "type": "string"
+                },
+                "types": {
+                    "description": "The types of study (e.g. intervention or observation or meta-analysis or clinical trials, or behavioural study, or the study design).",
+                    "type": "array",
+                    "items": {
+                        "$ref": "annotation_schema.json#"
+                    }
+                },
+                "startDate": {
+                    "description": "A timestamp to record the starting point of the activity.",
+                    "$ref": "date_info_schema.json#"
+                },
+                "endDate": {
+                    "description": "A timestamp to record the end point of the activity.",
+                    "$ref": "date_info_schema.json#"
+                },
+                "dates": {
+                    "description": "Relevant dates for the datasets, a date must be added, e.g. creation date or last modification date should be added.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "date_info_schema.json#"
+                    }
+                },
+                "duration": {
+                    "description": "The time during which the activity takes place.",
+                    "type": "string"
+                },
+                "location": {
+                    "description": "The location where the activity takes place.",
+                    "$ref": "annotation_schema.json#"
+                },
+                "performedBy": {
+                    "description": "The person(s) or organisation(s) responsible for executing the process.",
+                    "type": "array",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "$ref": "person_schema.json#"
+          },
+                            {
+                                "$ref": "organization_schema.json#"
+          }
+        ]
+                    }
+                },
+                "keywords": {
+                    "description": "Tags associated with the activity, which will help in its discovery.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "annotation_schema.json#"
+                    }
+                },
+                "input": {
+                    "description": "The entities used as input.",
+                    "type": "array",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "$ref": "dataset_schema.json#"
+          },
+                            {
+                                "$ref": "material_schema.json#"
+          }
+        ]
+                    }
+                },
+                "output": {
+                    "description": "The entities resulting from applying the activity.",
+                    "type": "array",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "$ref": "dataset_schema.json#"
+          },
+                            {
+                                "$ref": "material_schema.json#"
+          }
+        ]
+                    }
+                },
+                "schedulesActivity": {
+                    "description": "The activities scheduled by the study.",
+                    "type": "array",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "$ref": "activity_schema.json#"
+                            },
+                            {
+                                "$ref": "data_acquisition_schema.json#"
+                            },
+                            {
+                                "$ref": "data_analysis_schema.json#"
+                            }
+        ]
+                    }
+                },
+                "schedulesDataAcquisition": {
+                    "description": "The kind of techniques and response variables used during a study for acquiring data.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "data_acquisition_schema.json#"
+                    },
+                    "minItems": 1
+                },
+                "selectionCriteria": {
+                    "description": "The attributes and values that the material should meet in order to be part of the group.",
+                    "type": "array",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "$ref": "annotation_schema.json#"
+                            },
+                            {
+                                "$ref": "category_values_pair_schema.json#"
+                            }
+        ]
+                    }
+                },
+                "studyGroups": {
+                    "description": "The different study groups associated with a study.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "study_group_schema.json#"
+                    }
+                },
+                "usesReagent": {
+                    "description": "The materials that are used as reagents (but not subjects) of the study.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "material_schema.json#"
+                    }
+                },
+                "isAboutBiologicalEntity": {
+                    "description": "The biological entities relevant to the study, ideally from a controlled vocabulary/ontology such as Gene Ontology. [SMRnote: this is a related resource relType]",
+                    "type": "array",
+                    "items": {
+                        "$ref": "biological_entity_schema.json#"
+                    }
+                },
+                "extraProperties": {
+                    "description": "Extra properties that do not fit in the previous specified attributes. ",
+                    "type": "array",
+                    "items": {
+                        "$ref": "category_values_pair_schema.json#"
+                    }
+                }
+            },
+            "additionalProperties": false,
+            "required": ["name"]
+        },
+        "creators": {
+            "description": "The person(s) or organization(s) which contributed to the creation of the dataset. [SMRnote: does this construct work with JSON schema validators?  The role property should not be part of the person_schema or organization_schema--have to create a different agent instances for each role occurrence, so makes it hard to have a separate register for persons and organizations.]",
+            "type": "array",
+            "items": {
+                "oneOf": [
+                    {
+                        "$ref": "person_schema.json#"
+                    },
+                    {
+                        "$ref": "organization_schema.json#"
+                    }
+                ]
+            },
+            "minItems": 1
+        },
+        "licenses": {
+            "description": "The terms of use of the dataset.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "identifier": {
+                        "$ref": "identifier_info_schema.json#"
+                    },
+                    "alternateIdentifiers": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "alternate_identifier_info_schema.json#"
+                        }
+                    },
+                    "relatedIdentifiers": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "related_identifier_info_schema.json#"
+                        }
+                    },
+                    "name": {
+                        "description": "The name of the license.",
+                        "type": "string"
+                    },
+                    "version": {
+                        "description": "The version of the license.",
+                        "type": "string"
+                    },
+                    "creators": {
+                        "description": "The person(s) or organization(s) responsible for writing the license.",
+                        "type": "array",
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "$ref": "person_schema.json#"
+                                        },
+                                {
+                                    "$ref": "organization_schema.json#"
+                                        }
+        ]
+                        },
+                        "minItems": 1
+                    },
+                    "extraProperties": {
+                        "description": "Extra properties that do not fit in the previous specified attributes. ",
+                        "type": "array",
+                        "items": {
+                            "$ref": "category_values_pair_schema.json#"
+                        }
+                    }
+                },
+                "required": ["name"]
+            }
+        },
+        "isAbout": {
+            "description": "Different entities (biological entity, taxonomic information, disease, molecular entity, anatomical part, treatment) associated with this dataset. [SMRnote: this is a related resource relType, or a keyword group...]",
+            "type": "array",
+            "items": {
+                "anyOf": [
+                    {
+                        "$ref": "biological_entity_schema.json#"
+                    },
+                    {
+                        "$ref": "taxonomic_info_schema.json#"
+                    },
+                    {
+                        "$ref": "disease_schema.json#"
+                    },
+                    {
+                        "$ref": "molecular_entity_schema.json#"
+                    },
+                    {
+                        "$ref": "anatomical_part_schema.json#"
+                    },
+                    {
+                        "$ref": "treatment_schema.json#"
+                    }
+                ]
+            }
+        },
+        "hasPart": {
+            "description": "A Dataset that is a subset of this Dataset; Datasets declaring the 'hasPart' relationship are considered a collection of Datasets, the aggregation criteria could be included in the 'description' field. [SMRnote: this is a related resource relType]",
+            "type": "array",
+            "items": {
+                "$ref": "dataset_schema.json#"
+            }
+        },
+        "acknowledges": {
+            "description": "The grant(s) which funded and supported the work reported by the dataset. [SMRnote: this is a related resource relType]",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "@context": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            }
+                        ]
+                    },
+                    "@type": {
+                        "type": "string",
+                        "enum": ["Grant"]
+                    },
+                    "identifier": {
+                        "$ref": "identifier_info_schema.json#"
+                    },
+                    "alternateIdentifiers": {
+                        "description": "Alternate identifiers for the grant.",
+                        "type": "array",
+                        "items": {
+                            "$ref": "alternate_identifier_info_schema.json#"
+                        }
+                    },
+                    "relatedIdentifiers": {
+                        "description": "Related identifiers for the grant.",
+                        "type": "array",
+                        "items": {
+                            "$ref": "related_identifier_info_schema.json#"
+                        }
+                    },
+                    "name": {
+                        "description": "The name of the grant and its funding program.",
+                        "type": "string"
+                    },
+                    "funds": {
+                        "description": "The study or dataset supported by the grant.",
+                        "type": "array",
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "$ref": "study_schema.json#"
+                            },
+                                {
+                                    "$ref": "dataset_schema.json#"
+                            }
+        ]
+                        }
+                    },
+                    "funders": {
+                        "description": "The person(s) or organization(s) which has awarded the funds supporting the project.",
+                        "type": "array",
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "$ref": "person_schema.json#"
+                            },
+                                {
+                                    "$ref": "organization_schema.json#"
+                            }
+        ]
+                        },
+                        "minItems": 1
+                    },
+                    "awardees": {
+                        "description": "The person(s) or organization(s) which received the funds supporting the project.",
+                        "type": "array",
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "$ref": "person_schema.json#"
+                            },
+                                {
+                                    "$ref": "organization_schema.json#"
+                            }
+        ]
+                        }
+                    },
+                    "extraProperties": {
+                        "description": "Extra properties that do not fit in the previous specified attributes. ",
+                        "type": "array",
+                        "items": {
+                            "$ref": "category_values_pair_schema.json#"
+                        }
+                    }
+                },
+                "additionalProperties": false,
+                "required": ["name"]
+            }
+        },
+        "keywords": {
+            "description": "Tags associated with the dataset, which will help in its discovery. [SMRnote: need to be able to associate keywords with thesarus source and also to group keywords categorically for constructing facets hierarchies. What pointis ther allowing numeric keywords?  if these are tags (informal), what's the point of associating IRIs with them?]",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "oneOf": [
+                            {
+                                "type": "string"
+                                    },
+                            {
+                                "type": "number"
+                                    }
+                                ]
+                    },
+                    "valueIRI": {
+                        "type": "string",
+                        "format": "uri"
+                    }
+                }
+            }
+        },
+        "extraProperties": {
+            "description": "Extra properties that do not fit in the previous specified attributes. ",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "@context": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            }
+                          ]
+                    },
+                    "@type": {
+                        "type": "string",
+                        "enum": ["CategoryValuesPair"]
+                    },
+                    "category": {
+                        "description": "A characteristic or property about the entity this object is associated with.",
+                        "type": "string"
+                    },
+                    "categoryIRI": {
+                        "description": "The IRI corresponding to the category, if associated with an ontology term.",
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "values": {
+                        "description": "A set of (annotated) values associated with the cateogory.",
+                        "type": "array",
+                        "items": {
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "@context": {
+                                        "anyOf": [
+                                            {
+                                                "type": "string"
+        },
+                                            {
+                                                "type": "object"
+        }
+      ]
+                                    },
+                                    "@type": {
+                                        "type": "string",
+                                        "enum": ["Annotation"]
+                                    },
+                                    "value": {
+                                        "oneOf": [
+                                            {
+                                                "type": "string"
+                                            },
+                                            {
+                                                "type": "number"
+                                            }
+      ]
+                                    },
+                                    "valueIRI": {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                },
+                                "additionalProperties": false
+                            }
+                        }
+                    }
+                },
+                "additionalProperties": false
+            }
+        }
+    },
+    "additionalProperties": false,
+    "required": ["title", "types", "creators"]
+}
