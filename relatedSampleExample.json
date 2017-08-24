@@ -1,0 +1,6 @@
+"relatedResources": {
+    "associationLabel": "IGSN for analyzed sample",
+    "associationTargetURIs": ["igsn:IESMR22259"],                            
+    "associationType": "source sample",
+    "associationTargetType": "material specimen"
+    }
