@@ -1,0 +1,782 @@
+{
+   "_id": "5994c4c7c080851fe26a702d",
+   "primaryKey": "49",
+   "Version": 1,
+   "CrawlDate": "2017-08-16T22:18:47.590Z",
+   "OriginalDoc": {
+      "gmi:MI_Metadata": {
+         "gmd:fileIdentifier": {
+            "gco:CharacterString": {
+               "_$": "49"
+            }
+         },
+         "gmd:language": {
+            "gco:CharacterString": {
+               "_$": "en"
+            }
+         },
+         "gmd:contact": {
+            "gmd:CI_ResponsibleParty": {
+               "gmd:organisationName": {
+                  "gco:CharacterString": {
+                     "_$": "Earthcube CINERGI Metadata Pipeline"
+                  }
+               },
+               "gmd:positionName": {
+                  "gco:CharacterString": {
+                     "_$": "CINERGI Metadata Contact"
+                  }
+               },
+               "gmd:contactInfo": {
+                  "gmd:CI_Contact": {
+                     "gmd:address": {
+                        "gmd:CI_Address": {
+                           "gmd:electronicMailAddress": {
+                              "gco:CharacterString": {
+                                 "_$": "metadata@earthcube.org"
+                              }
+                           }
+                        }
+                     }
+                  }
+               },
+               "gmd:role": {
+                  "gmd:CI_RoleCode": {
+                     "@codeSpace": "ISOTC211/19115",
+                     "@codeList": "http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode",
+                     "@codeListValue": "pointOfContact",
+                     "_$": "pointOfContact"
+                  }
+               }
+            }
+         },
+         "gmd:dateStamp": {
+            "@gco:nilReason": "unknown"
+         },
+         "gmd:metadataStandardVersion": {
+            "gco:CharacterString": {
+               "_$": "2003"
+            }
+         },
+         "gmd:identificationInfo": {
+            "gmd:MD_DataIdentification": {
+               "gmd:citation": {
+                  "gmd:CI_Citation": {
+                     "gmd:title": {
+                        "gco:CharacterString": {
+                           "_$": "Predicting Best Crop Location"
+                        }
+                     },
+                     "gmd:date": {
+                        "gmd:CI_Date": {
+                           "gmd:date": {
+                              "gco:Date": {
+                                 "_$": "2016-09-22"
+                              }
+                           },
+                           "gmd:dateType": {
+                              "gmd:CI_DateTypeCode": {
+                                 "@codeSpace": "ISOTC211/19115",
+                                 "@codeList": "http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode",
+                                 "@codeListValue": "publication",
+                                 "_$": "publication"
+                              }
+                           }
+                        }
+                     }
+                  }
+               },
+               "gmd:abstract": {
+                  "gco:CharacterString": {
+                     "_$": "Increase agricultural production by identifying which corn genes and variants are responsible for allowing corn to reach yield under different environmental conditions; allow seed producers to predict which varieties will do well in areas based on climate model predictions. This requires the analysis of genetic data with yeild information and meteorological data, soil data and other environmental data. \n               Main CI Challenges: - Data are distributed among multiple sources; some data is proprietary, ;49formats are heterogeneous and need manual effort to integrate;49 analysis requires demanding computations only possible on the largest systems;\n               Data Discovery Challenges: 1) Average corn yields still fall significantly short of maximum yield potential defined by genetics in ideal growing conditions. ;2) Data has to be brought together using brute force and manual methods: ;     a) All of the heterogeneous data sets from the distributed sources have to be re-entered in a new software environment and integrated around space and time. ;     b) Significant time has to be taken for downloading and reformatting?iffering time scales.;3) Weather changes all the time and corn is in the ground for several months: simple averages won? work. ;4) Most traits of interest that have an impact on yield are complex traits, i.e. traits controlled by many different genes. So computational analysis needed to identify the genes underlying complex traits is very demanding and only feasible on the largest systems currently available unless new analysis routines become available.;\n                    Data Types and Formats: Data formats: pdf (tables and maps), Excel, FASTA (genetic), GRIB (climate projections), netCDF, CSV, JSON, MS Access. ;Data Types & Sources: corn seed genetic variation data (companies and putlic sector), climate projections (IPCC), crops location data with productivity by state and county (USDA), meteorological data (NOAA NWS), soil data (USDA Natural Resources Conservation Science). ;Data Volume: Big;\n                    Additional Information:"
+                  }
+               },
+               "gmd:descriptiveKeywords": [
+                  {
+                     "gmd:MD_Keywords": {
+                        "gmd:keyword": [
+                           {
+                              "gco:CharacterString": {
+                                 "_$": "Hazards"
+                              }
+                           },
+                           {
+                              "gco:CharacterString": {
+                                 "_$": "Predictions."
+                              }
+                           }
+                        ],
+                        "gmd:type": {
+                           "gmd:MD_KeywordTypeCode": {
+                              "@codeSpace": "ISOTC211/19115",
+                              "@codeList": "http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode",
+                              "@codeListValue": "theme",
+                              "_$": "theme"
+                           }
+                        },
+                        "gmd:thesaurusName": {
+                           "gmd:CI_Citation": {
+                              "gmd:title": {
+                                 "gco:CharacterString": {
+                                    "_$": "CINERGI Themes"
+                                 }
+                              },
+                              "gmd:date": {
+                                 "gmd:CI_Date": {
+                                    "gmd:date": {
+                                       "gco:Date": {
+                                          "_$": "2015-01-01"
+                                       }
+                                    },
+                                    "gmd:dateType": {
+                                       "gmd:CI_DateTypeCode": {
+                                          "@codeListValue": "publication",
+                                          "@codeList": "http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode"
+                                       }
+                                    }
+                                 }
+                              }
+                           }
+                        }
+                     }
+                  },
+                  {
+                     "gmd:MD_Keywords": {
+                        "gmd:keyword": [
+                           {
+                              "gco:CharacterString": {
+                                 "_$": "NOAA"
+                              }
+                           },
+                           {
+                              "gco:CharacterString": {
+                                 "_$": "USDA"
+                              }
+                           },
+                           {
+                              "gco:CharacterString": {
+                                 "_$": "iPlant"
+                              }
+                           },
+                           {
+                              "gco:CharacterString": {
+                                 "_$": "and seed companies have standards. The hope is create a new integration and new standard."
+                              }
+                           }
+                        ],
+                        "gmd:type": {
+                           "gmd:MD_KeywordTypeCode": {
+                              "@codeSpace": "ISOTC211/19115",
+                              "@codeList": "http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode",
+                              "@codeListValue": "theme",
+                              "_$": "theme"
+                           }
+                        }
+                     }
+                  }
+               ],
+               "gmd:language": {
+                  "gco:CharacterString": {
+                     "_$": "en"
+                  }
+               },
+               "gmd:topicCategory": [
+                  {
+                     "gmd:MD_TopicCategoryCode": {
+                        "_$": "geoscientificInformation"
+                     }
+                  },
+                  {
+                     "gmd:MD_TopicCategoryCode": {
+                        "_$": "environment"
+                     }
+                  }
+               ]
+            }
+         },
+         "gmd:distributionInfo": {
+            "gmd:MD_Distribution": {
+               "gmd:distributionFormat": {
+                  "gmd:MD_Format": {
+                     "gmd:name": {
+                        "gco:CharacterString": {
+                           "_$": "Resource URL"
+                        }
+                     },
+                     "gmd:version": {
+                        "gco:CharacterString": {
+                           "_$": "0.0"
+                        }
+                     }
+                  }
+               },
+               "gmd:transferOptions": {
+                  "gmd:MD_DigitalTransferOptions": {
+                     "gmd:onLine": {
+                        "gmd:CI_OnlineResource": {
+                           "gmd:linkage": {
+                              "gmd:URL": {
+                                 "_$": "https://docs.google.com/document/d/1MruJIijEsaC3jSKGTDLPIA-d-M9htb_PQQBt0vzE-WU/edit"
+                              }
+                           },
+                           "gmd:name": {
+                              "gco:CharacterString": {
+                                 "_$": "BioGeoSIGiPlan - Stephen Goff and Anne Thessen"
+                              }
+                           },
+                           "gmd:function": {
+                              "gmd:CI_OnLineFunctionCode": {
+                                 "@codeList": "http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_OnLineFunctionCode",
+                                 "@codeListValue": "download"
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      },
+      "_@gmi": "http://www.isotc211.org/2005/gmi",
+      "_@default": "",
+      "_@gco": "http://www.isotc211.org/2005/gco",
+      "_@gmd": "http://www.isotc211.org/2005/gmd",
+      "_@gml": "http://www.opengis.net/gml",
+      "_@gmx": "http://www.isotc211.org/2005/gmx",
+      "_@srv": "http://www.isotc211.org/2005/srv",
+      "_@xlink": "http://www.w3.org/1999/xlink",
+      "_@xml": "http://www.w3.org/XML/1998/namespace"
+   },
+   "SourceInfo": {
+      "SourceID": "cinergi-0034",
+      "ViewID": "",
+      "Name": "EarthCube Use Cases",
+      "DataSource": "EarthCubeUC"
+   },
+   "Data": {
+      "spatial": {
+         "bounding_boxes": [],
+         "place_keywords": [],
+         "text": "Predicting Best Crop Location \nIncrease agricultural production by identifying which corn genes and variants are responsible for allowing corn to reach yield under different environmental conditions; allow seed producers to predict which varieties will do well in areas based on climate model predictions. This requires the analysis of genetic data with yeild information and meteorological data, soil data and other environmental data. \n               Main CI Challenges: - Data are distributed among multiple sources; some data is proprietary, ;49formats are heterogeneous and need manual effort to integrate;49 analysis requires demanding computations only possible on the largest systems;\n               Data Discovery Challenges: 1) Average corn yields still fall significantly short of maximum yield potential defined by genetics in ideal growing conditions. ;2) Data has to be brought together using brute force and manual methods: ;     a) All of the heterogeneous data sets from the distributed sources have to be re-entered in a new software environment and integrated around space and time. ;     b) Significant time has to be taken for downloading and reformatting?iffering time scales.;3) Weather changes all the time and corn is in the ground for several months: simple averages won? work. ;4) Most traits of interest that have an impact on yield are complex traits, i.e. traits controlled by many different genes. So computational analysis needed to identify the genes underlying complex traits is very demanding and only feasible on the largest systems currently available unless new analysis routines become available.;\n                    Data Types and Formats: Data formats: pdf (tables and maps), Excel, FASTA (genetic), GRIB (climate projections), netCDF, CSV, JSON, MS Access. ;Data Types & Sources: corn seed genetic variation data (companies and putlic sector), climate projections (IPCC), crops location data with productivity by state and county (USDA), meteorological data (NOAA NWS), soil data (USDA Natural Resources Conservation Science). ;Data Volume: Big;\n                    Additional Information: \n",
+         "invalid_place_keywords": [],
+         "derived_bounding_boxes_from_places": {},
+         "derived_place_from_text": [],
+         "derived_bounding_boxes_from_derived_place": {}
+      },
+      "keywords": [
+         {
+            "term": "Meteorology",
+            "ontId": "http://www.vocabularyserver.com/usgs/index.php?tema=106&/atmospheric-sciences",
+            "fullHierarchy": "Science Domain > Atmospheric Sciences > Meteorology",
+            "facetHierarchy": "Science Domain > Atmospheric Sciences",
+            "entityInfos": [
+               {
+                  "id": "http://www.vocabularyserver.com/usgs/index.php?tema=106&/atmospheric-sciences",
+                  "start": -1,
+                  "end": -1,
+                  "category": "Science Domain > Atmospheric Sciences"
+               }
+            ]
+         },
+         {
+            "term": "Data Set",
+            "ontId": "http://hydro10.sdsc.edu/cinergi_ontology/dataset#DataSet",
+            "fullHierarchy": "Resource Type > Data Set",
+            "facetHierarchy": "Resource Type > Data Set",
+            "entityInfos": [
+               {
+                  "id": "http://hydro10.sdsc.edu/cinergi_ontology/dataset#DataSet",
+                  "start": -1,
+                  "end": -1,
+                  "category": "Resource Type > Data Set"
+               }
+            ]
+         },
+         {
+            "term": "Force",
+            "ontId": "http://hydro10.sdsc.edu/cinergi_ontology/basic#Measure",
+            "fullHierarchy": "Property > Measure > Physical Quantity > Force",
+            "facetHierarchy": "Property > Measure",
+            "entityInfos": [
+               {
+                  "id": "http://hydro10.sdsc.edu/cinergi_ontology/basic#Measure",
+                  "start": -1,
+                  "end": -1,
+                  "category": "Property > Measure"
+               }
+            ]
+         },
+         {
+            "term": "Scale",
+            "ontId": "http://hydro10.sdsc.edu/cinergi_ontology/basic#Measure",
+            "fullHierarchy": "Property > Measure > Scale",
+            "facetHierarchy": "Property > Measure",
+            "entityInfos": [
+               {
+                  "id": "http://hydro10.sdsc.edu/cinergi_ontology/basic#Measure",
+                  "start": -1,
+                  "end": -1,
+                  "category": "Property > Measure"
+               }
+            ]
+         },
+         {
+            "term": "Volume",
+            "ontId": "http://hydro10.sdsc.edu/cinergi_ontology/basic#Measure",
+            "fullHierarchy": "Property > Measure > Volume",
+            "facetHierarchy": "Property > Measure",
+            "entityInfos": [
+               {
+                  "id": "http://hydro10.sdsc.edu/cinergi_ontology/basic#Measure",
+                  "start": -1,
+                  "end": -1,
+                  "category": "Property > Measure"
+               }
+            ]
+         },
+         {
+            "term": "Soil",
+            "ontId": "http://purl.obolibrary.org/obo/ENVO_00010483",
+            "fullHierarchy": "Material > Environmental Material > Soil",
+            "facetHierarchy": "Material > Environmental Material",
+            "entityInfos": [
+               {
+                  "id": "http://purl.obolibrary.org/obo/ENVO_00010483",
+                  "start": -1,
+                  "end": -1,
+                  "category": "Material > Environmental Material"
+               }
+            ]
+         },
+         {
+            "term": "Software",
+            "ontId": "http://www.ebi.ac.uk/swo/SWO_0000001",
+            "fullHierarchy": "Resource Type > Software",
+            "facetHierarchy": "Resource Type > Software",
+            "entityInfos": [
+               {
+                  "id": "http://www.ebi.ac.uk/swo/SWO_0000001",
+                  "start": -1,
+                  "end": -1,
+                  "category": "Resource Type > Software"
+               }
+            ]
+         },
+         {
+            "term": "Genetic",
+            "ontId": "http://edamontology.org/topic_3070",
+            "fullHierarchy": "Science Domain > Biology > Genetics",
+            "facetHierarchy": "Science Domain > Biology",
+            "entityInfos": [
+               {
+                  "id": "http://edamontology.org/topic_3070",
+                  "start": -1,
+                  "end": -1,
+                  "category": "Science Domain > Biology"
+               }
+            ]
+         },
+         {
+            "term": "Analysis",
+            "ontId": "http://www.ebi.ac.uk/swo/SWO_0000003",
+            "fullHierarchy": "Method > Information Processing > Analysis",
+            "facetHierarchy": "Method > Information Processing",
+            "entityInfos": [
+               {
+                  "id": "http://www.ebi.ac.uk/swo/SWO_0000003",
+                  "start": -1,
+                  "end": -1,
+                  "category": "Method > Information Processing"
+               }
+            ]
+         },
+         {
+            "term": "Averaging",
+            "ontId": "http://www.ebi.ac.uk/swo/SWO_0000003",
+            "fullHierarchy": "Method > Information Processing > Averaging",
+            "facetHierarchy": "Method > Information Processing",
+            "entityInfos": [
+               {
+                  "id": "http://www.ebi.ac.uk/swo/SWO_0000003",
+                  "start": -1,
+                  "end": -1,
+                  "category": "Method > Information Processing"
+               }
+            ]
+         },
+         {
+            "term": "USDA",
+            "ontId": "http://gcmdservices.gsfc.nasa.gov/kms/concept/2b890e5b-1b50-4454-90a9-538dd891da9a",
+            "fullHierarchy": "Organization > GOVERNMENT AGENCIES-U.S. FEDERAL AGENCIES > U. S. Department of Agriculture",
+            "facetHierarchy": "Organization > GOVERNMENT AGENCIES-U.S. FEDERAL AGENCIES",
+            "entityInfos": [
+               {
+                  "id": "http://gcmdservices.gsfc.nasa.gov/kms/concept/2b890e5b-1b50-4454-90a9-538dd891da9a",
+                  "start": -1,
+                  "end": -1,
+                  "category": "Organization > GOVERNMENT AGENCIES-U.S. FEDERAL AGENCIES"
+               }
+            ]
+         },
+         {
+            "term": "NOAA",
+            "ontId": "http://gcmdservices.gsfc.nasa.gov/kms/concept/2b890e5b-1b50-4454-90a9-538dd891da9a",
+            "fullHierarchy": "Organization > GOVERNMENT AGENCIES-U.S. FEDERAL AGENCIES > NOAA",
+            "facetHierarchy": "Organization > GOVERNMENT AGENCIES-U.S. FEDERAL AGENCIES",
+            "entityInfos": [
+               {
+                  "id": "http://gcmdservices.gsfc.nasa.gov/kms/concept/2b890e5b-1b50-4454-90a9-538dd891da9a",
+                  "start": -1,
+                  "end": -1,
+                  "category": "Organization > GOVERNMENT AGENCIES-U.S. FEDERAL AGENCIES"
+               }
+            ]
+         }
+      ],
+      "enhancedKeywords": [
+         {
+            "id": "http://www.vocabularyserver.com/usgs/index.php?tema=1031&/meteorology",
+            "term": "Meteorology",
+            "category": "Science Domain > Atmospheric Sciences",
+            "hierarchyPath": "Science Domain > Atmospheric Sciences > Meteorology",
+            "type": "Keyword",
+            "lastChangedDate": "2017-08-16T22:20:11Z"
+         },
+         {
+            "id": "http://purl.obolibrary.org/obo/ENVO_00001998",
+            "term": "Soil",
+            "category": "Material > Environmental Material",
+            "hierarchyPath": "Material > Environmental Material > Soil",
+            "type": "Keyword",
+            "lastChangedDate": "2017-08-16T22:20:11Z"
+         },
+         {
+            "id": "http://sweet.jpl.nasa.gov/2.3/propQuantity.owl#Force",
+            "term": "Force",
+            "category": "Property > Measure",
+            "hierarchyPath": "Property > Measure > Physical Quantity > Force",
+            "type": "Keyword",
+            "lastChangedDate": "2017-08-16T22:20:11Z"
+         },
+         {
+            "id": "http://hydro10.sdsc.edu/cinergi_ontology/basic#Scale",
+            "term": "Scale",
+            "category": "Property > Measure",
+            "hierarchyPath": "Property > Measure > Scale",
+            "type": "Keyword",
+            "lastChangedDate": "2017-08-16T22:20:11Z"
+         },
+         {
+            "id": "http://hydro10.sdsc.edu/cinergi_ontology/metadata#volumes",
+            "term": "Volume",
+            "category": "Property > Measure",
+            "hierarchyPath": "Property > Measure > Volume",
+            "type": "Keyword",
+            "lastChangedDate": "2017-08-16T22:20:11Z"
+         },
+         {
+            "id": "http://hydro10.sdsc.edu/cinergi_ontology/dataset#DataSet",
+            "term": "Data Set",
+            "category": "Resource Type > Data Set",
+            "hierarchyPath": "Resource Type > Data Set",
+            "type": "Keyword",
+            "lastChangedDate": "2017-08-16T22:20:11Z"
+         },
+         {
+            "id": "http://www.ebi.ac.uk/swo/SWO_0000001",
+            "term": "Software",
+            "category": "Resource Type > Software",
+            "hierarchyPath": "Resource Type > Software",
+            "type": "Keyword",
+            "lastChangedDate": "2017-08-16T22:20:11Z"
+         },
+         {
+            "id": "http://edamontology.org/operation_2945",
+            "term": "Analysis",
+            "category": "Method > Information Processing",
+            "hierarchyPath": "Method > Information Processing > Analysis",
+            "type": "Keyword",
+            "lastChangedDate": "2017-08-16T22:20:11Z"
+         },
+         {
+            "id": "http://www.ebi.ac.uk/swo/objective/SWO_7000005",
+            "term": "Averaging",
+            "category": "Method > Information Processing",
+            "hierarchyPath": "Method > Information Processing > Averaging",
+            "type": "Keyword",
+            "lastChangedDate": "2017-08-16T22:20:11Z"
+         },
+         {
+            "id": "http://gcmdservices.gsfc.nasa.gov/kms/concept/90bb0b25-358d-4f12-afca-fc54e99379ff",
+            "term": "USDA",
+            "category": "Organization > GOVERNMENT AGENCIES-U.S. FEDERAL AGENCIES",
+            "hierarchyPath": "Organization > GOVERNMENT AGENCIES-U.S. FEDERAL AGENCIES > U. S. Department of Agriculture",
+            "type": "Keyword",
+            "lastChangedDate": "2017-08-16T22:20:11Z"
+         },
+         {
+            "id": "http://hydro10.sdsc.edu/cinergi_ontology/cinergi.owl#NOAA",
+            "term": "NOAA",
+            "category": "Organization > GOVERNMENT AGENCIES-U.S. FEDERAL AGENCIES",
+            "hierarchyPath": "Organization > GOVERNMENT AGENCIES-U.S. FEDERAL AGENCIES > NOAA",
+            "type": "Keyword",
+            "lastChangedDate": "2017-08-16T22:20:11Z"
+         }
+      ]
+   },
+   "Processing": {
+      "status": "finished",
+      "docId": "8720da8b-8515-42d3-80b7-e3ff205284a7"
+   },
+   "History": {
+      "batchId": "08162017-22:18",
+      "prov": {
+         "curVersion": "1.3",
+         "lastProcessedDate": "2017-08-16T22:20:11.722Z",
+         "events": [
+            {
+               "wasGeneratedBy": {
+                  "_:wGB44": {
+                     "prov:activity": "foundry:ac_1",
+                     "prov:entity": "foundry:en_2"
+                  }
+               },
+               "entity": {
+                  "foundry:en_1": {
+                     "foundry:label": {
+                        "type": "pre_0:string",
+                        "_$": "EarthCube Use Cases:49"
+                     },
+                     "foundry:creationTime": {
+                        "type": "pre_0:string",
+                        "_$": "2017-08-16T22:18:47Z"
+                     },
+                     "foundry:version": {
+                        "type": "pre_0:string",
+                        "_$": "1.0"
+                     },
+                     "foundry:sourceId": {
+                        "type": "pre_0:string",
+                        "_$": "cinergi-0034"
+                     },
+                     "foundry:UUID": {
+                        "type": "pre_0:string",
+                        "_$": "5624bbd2-7898-44d6-bd7d-9df328239823"
+                     }
+                  },
+                  "foundry:en_2": {
+                     "foundry:label": {
+                        "type": "pre_0:string",
+                        "_$": "EarthCube Use Cases:49"
+                     },
+                     "foundry:creationTime": {
+                        "type": "pre_0:string",
+                        "_$": "2017-08-16T22:18:47Z"
+                     },
+                     "foundry:version": {
+                        "type": "pre_0:string",
+                        "_$": "1.1"
+                     },
+                     "foundry:UUID": {
+                        "type": "pre_0:string",
+                        "_$": "49"
+                     }
+                  }
+               },
+               "prefix": {
+                  "xsd": "http://www.w3.org/2001/XMLSchema#",
+                  "pre_0": "http://www.w3.org/2001/XMLSchema",
+                  "prov": "http://www.w3.org/ns/prov#",
+                  "foundry": "http://example.org"
+               },
+               "used": {
+                  "_:u44": {
+                     "prov:activity": "foundry:ac_1",
+                     "prov:entity": "foundry:en_1"
+                  }
+               },
+               "activity": {
+                  "foundry:ac_1": {
+                     "prov:type": {
+                        "type": "pre_0:string",
+                        "_$": "ingestion"
+                     },
+                     "prov:startTime": "2017-08-16T22:18:47Z",
+                     "prov:endTime": "2017-08-16T22:18:47Z",
+                     "prov:how": {
+                        "type": "pre_0:string",
+                        "_$": "Added document with uuid 49"
+                     }
+                  }
+               }
+            },
+            {
+               "wasGeneratedBy": {
+                  "_:wGB136": {
+                     "prov:activity": "foundry:ac_1",
+                     "prov:entity": "foundry:en_2"
+                  }
+               },
+               "entity": {
+                  "foundry:en_1": {
+                     "foundry:label": {
+                        "_$": "EarthCube Use Cases:49",
+                        "type": "pre_0:string"
+                     },
+                     "foundry:creationTime": {
+                        "_$": "2017-08-16T22:18:47Z",
+                        "type": "pre_0:string"
+                     },
+                     "foundry:version": {
+                        "_$": "1.1",
+                        "type": "pre_0:string"
+                     },
+                     "foundry:sourceId": {
+                        "_$": "cinergi-0034",
+                        "type": "pre_0:string"
+                     },
+                     "foundry:UUID": {
+                        "_$": "49",
+                        "type": "pre_0:string"
+                     }
+                  },
+                  "foundry:en_2": {
+                     "foundry:label": {
+                        "_$": "EarthCube Use Cases:49",
+                        "type": "pre_0:string"
+                     },
+                     "foundry:creationTime": {
+                        "_$": "2017-08-16T22:20:10Z",
+                        "type": "pre_0:string"
+                     },
+                     "foundry:version": {
+                        "_$": "1.2",
+                        "type": "pre_0:string"
+                     },
+                     "foundry:UUID": {
+                        "_$": "49",
+                        "type": "pre_0:string"
+                     }
+                  }
+               },
+               "prefix": {
+                  "xsd": "http://www.w3.org/2001/XMLSchema#",
+                  "pre_0": "http://www.w3.org/2001/XMLSchema",
+                  "prov": "http://www.w3.org/ns/prov#",
+                  "foundry": "http://example.org"
+               },
+               "wasDerivedFrom": {
+                  "_:wDF87": {
+                     "prov:activity": "foundry:ac_1",
+                     "prov:generatedEntity": "foundry:en_2",
+                     "prov:usedEntity": "foundry:en_1"
+                  }
+               },
+               "used": {
+                  "_:u136": {
+                     "prov:activity": "foundry:ac_1",
+                     "prov:entity": "foundry:en_1"
+                  }
+               },
+               "activity": {
+                  "foundry:ac_1": {
+                     "prov:type": {
+                        "_$": "spatialEnhancer",
+                        "type": "pre_0:string"
+                     },
+                     "prov:startTime": "2017-08-16T22:20:10Z",
+                     "prov:endTime": "2017-08-16T22:20:10Z",
+                     "prov:how": {
+                        "_$": "No bounding box is added..",
+                        "type": "pre_0:string"
+                     }
+                  }
+               }
+            },
+            {
+               "wasGeneratedBy": {
+                  "_:wGB137": {
+                     "prov:activity": "foundry:ac_1",
+                     "prov:entity": "foundry:en_2"
+                  }
+               },
+               "entity": {
+                  "foundry:en_1": {
+                     "foundry:label": {
+                        "_$": "EarthCube Use Cases:49",
+                        "type": "pre_0:string"
+                     },
+                     "foundry:creationTime": {
+                        "_$": "2017-08-16T22:20:10Z",
+                        "type": "pre_0:string"
+                     },
+                     "foundry:version": {
+                        "_$": "1.2",
+                        "type": "pre_0:string"
+                     },
+                     "foundry:sourceId": {
+                        "_$": "cinergi-0034",
+                        "type": "pre_0:string"
+                     },
+                     "foundry:UUID": {
+                        "_$": "49",
+                        "type": "pre_0:string"
+                     }
+                  },
+                  "foundry:en_2": {
+                     "foundry:label": {
+                        "_$": "EarthCube Use Cases:49",
+                        "type": "pre_0:string"
+                     },
+                     "foundry:creationTime": {
+                        "_$": "2017-08-16T22:20:11Z",
+                        "type": "pre_0:string"
+                     },
+                     "foundry:version": {
+                        "_$": "1.3",
+                        "type": "pre_0:string"
+                     },
+                     "foundry:UUID": {
+                        "_$": "49",
+                        "type": "pre_0:string"
+                     }
+                  }
+               },
+               "prefix": {
+                  "xsd": "http://www.w3.org/2001/XMLSchema#",
+                  "pre_0": "http://www.w3.org/2001/XMLSchema",
+                  "prov": "http://www.w3.org/ns/prov#",
+                  "foundry": "http://example.org"
+               },
+               "wasDerivedFrom": {
+                  "_:wDF88": {
+                     "prov:activity": "foundry:ac_1",
+                     "prov:generatedEntity": "foundry:en_2",
+                     "prov:usedEntity": "foundry:en_1"
+                  }
+               },
+               "used": {
+                  "_:u137": {
+                     "prov:activity": "foundry:ac_1",
+                     "prov:entity": "foundry:en_1"
+                  }
+               },
+               "activity": {
+                  "foundry:ac_1": {
+                     "prov:type": {
+                        "_$": "keywordEnhancer",
+                        "type": "pre_0:string"
+                     },
+                     "prov:startTime": "2017-08-16T22:20:11Z",
+                     "prov:endTime": "2017-08-16T22:20:11Z",
+                     "prov:how": {
+                        "_$": "Added keywords Meteorology for category Science Domain > Atmospheric Sciences. Added keywords Data Set for category Resource Type > Data Set. Added keywords Force,Scale,Volume for category Property > Measure. Added keywords Soil for category Material > Environmental Material. Added keywords Software for category Resource Type > Software. Added keywords Genetic for category Science Domain > Biology. Added keywords Analysis,Averaging for category Method > Information Processing. Added keywords USDA,NOAA for category Organization > GOVERNMENT AGENCIES-U.S. FEDERAL AGENCIES.",
+                        "type": "pre_0:string"
+                     }
+                  }
+               }
+            }
+         ]
+      }
+   }
+}

@@ -1,0 +1,1118 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "definitions": {},
+    "id": "http://cinergi.org/stagingDbSchema.json",
+    "properties": {
+        "CrawlDate": {
+            "id": "/CrawlDate",
+            "type": "string"
+        },
+        "Data": {
+            "id": "/Data",
+            "properties": {
+                "enhancedKeywords": {
+                    "id": "/Data/enhancedKeywords",
+                    "items": {
+                        "id": "/Data/enhancedKeywords/items",
+                        "properties": {
+                            "category": {
+                                "id": "/Data/enhancedKeywords/items/category",
+                                "type": "string"
+                            },
+                            "hierarchyPath": {
+                                "id": "/Data/enhancedKeywords/items/hierarchyPath",
+                                "type": "string"
+                            },
+                            "id": {
+                                "id": "/Data/enhancedKeywords/items/id",
+                                "type": "string"
+                            },
+                            "lastChangedDate": {
+                                "id": "/Data/enhancedKeywords/items/lastChangedDate",
+                                "type": "string"
+                            },
+                            "term": {
+                                "id": "/Data/enhancedKeywords/items/term",
+                                "type": "string"
+                            },
+                            "type": {
+                                "id": "/Data/enhancedKeywords/items/type",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "keywords": {
+                    "id": "/Data/keywords",
+                    "items": {
+                        "id": "/Data/keywords/items",
+                        "properties": {
+                            "entityInfos": {
+                                "id": "/Data/keywords/items/entityInfos",
+                                "items": {
+                                    "id": "/Data/keywords/items/entityInfos/items",
+                                    "properties": {
+                                        "category": {
+                                            "id": "/Data/keywords/items/entityInfos/items/category",
+                                            "type": "string"
+                                        },
+                                        "end": {
+                                            "id": "/Data/keywords/items/entityInfos/items/end",
+                                            "type": "integer"
+                                        },
+                                        "id": {
+                                            "id": "/Data/keywords/items/entityInfos/items/id",
+                                            "type": "string"
+                                        },
+                                        "start": {
+                                            "id": "/Data/keywords/items/entityInfos/items/start",
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            },
+                            "facetHierarchy": {
+                                "id": "/Data/keywords/items/facetHierarchy",
+                                "type": "string"
+                            },
+                            "fullHierarchy": {
+                                "id": "/Data/keywords/items/fullHierarchy",
+                                "type": "string"
+                            },
+                            "ontId": {
+                                "id": "/Data/keywords/items/ontId",
+                                "type": "string"
+                            },
+                            "term": {
+                                "id": "/Data/keywords/items/term",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "spatial": {
+                    "id": "/Data/spatial",
+                    "properties": {
+                        "bounding_boxes": {
+                            "id": "/Data/spatial/bounding_boxes",
+                            "items": {},
+                            "type": "array"
+                        },
+                        "derived_bounding_boxes_from_derived_place": {
+                            "id": "/Data/spatial/derived_bounding_boxes_from_derived_place",
+                            "properties": {},
+                            "type": "object"
+                        },
+                        "derived_bounding_boxes_from_places": {
+                            "id": "/Data/spatial/derived_bounding_boxes_from_places",
+                            "properties": {},
+                            "type": "object"
+                        },
+                        "derived_place_from_text": {
+                            "id": "/Data/spatial/derived_place_from_text",
+                            "items": {},
+                            "type": "array"
+                        },
+                        "invalid_place_keywords": {
+                            "id": "/Data/spatial/invalid_place_keywords",
+                            "items": {},
+                            "type": "array"
+                        },
+                        "place_keywords": {
+                            "id": "/Data/spatial/place_keywords",
+                            "items": {},
+                            "type": "array"
+                        },
+                        "text": {
+                            "id": "/Data/spatial/text",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "History": {
+            "id": "/History",
+            "properties": {
+                "batchId": {
+                    "id": "/History/batchId",
+                    "type": "string"
+                },
+                "prov": {
+                    "id": "/History/prov",
+                    "properties": {
+                        "curVersion": {
+                            "id": "/History/prov/curVersion",
+                            "type": "string"
+                        },
+                        "events": {
+                            "id": "/History/prov/events",
+                            "items": {
+                                "id": "/History/prov/events/items",
+                                "properties": {
+                                    "activity": {
+                                        "id": "/History/prov/events/items/activity",
+                                        "properties": {
+                                            "foundry:ac_1": {
+                                                "id": "/History/prov/events/items/activity/foundry:ac_1",
+                                                "properties": {
+                                                    "prov:endTime": {
+                                                        "id": "/History/prov/events/items/activity/foundry:ac_1/prov:endTime",
+                                                        "type": "string"
+                                                    },
+                                                    "prov:how": {
+                                                        "id": "/History/prov/events/items/activity/foundry:ac_1/prov:how",
+                                                        "properties": {
+                                                            "_$": {
+                                                                "id": "/History/prov/events/items/activity/foundry:ac_1/prov:how/_$",
+                                                                "type": "string"
+                                                            },
+                                                            "type": {
+                                                                "id": "/History/prov/events/items/activity/foundry:ac_1/prov:how/type",
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "prov:startTime": {
+                                                        "id": "/History/prov/events/items/activity/foundry:ac_1/prov:startTime",
+                                                        "type": "string"
+                                                    },
+                                                    "prov:type": {
+                                                        "id": "/History/prov/events/items/activity/foundry:ac_1/prov:type",
+                                                        "properties": {
+                                                            "_$": {
+                                                                "id": "/History/prov/events/items/activity/foundry:ac_1/prov:type/_$",
+                                                                "type": "string"
+                                                            },
+                                                            "type": {
+                                                                "id": "/History/prov/events/items/activity/foundry:ac_1/prov:type/type",
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "entity": {
+                                        "id": "/History/prov/events/items/entity",
+                                        "properties": {
+                                            "foundry:en_1": {
+                                                "id": "/History/prov/events/items/entity/foundry:en_1",
+                                                "properties": {
+                                                    "foundry:UUID": {
+                                                        "id": "/History/prov/events/items/entity/foundry:en_1/foundry:UUID",
+                                                        "properties": {
+                                                            "_$": {
+                                                                "id": "/History/prov/events/items/entity/foundry:en_1/foundry:UUID/_$",
+                                                                "type": "string"
+                                                            },
+                                                            "type": {
+                                                                "id": "/History/prov/events/items/entity/foundry:en_1/foundry:UUID/type",
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "foundry:creationTime": {
+                                                        "id": "/History/prov/events/items/entity/foundry:en_1/foundry:creationTime",
+                                                        "properties": {
+                                                            "_$": {
+                                                                "id": "/History/prov/events/items/entity/foundry:en_1/foundry:creationTime/_$",
+                                                                "type": "string"
+                                                            },
+                                                            "type": {
+                                                                "id": "/History/prov/events/items/entity/foundry:en_1/foundry:creationTime/type",
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "foundry:label": {
+                                                        "id": "/History/prov/events/items/entity/foundry:en_1/foundry:label",
+                                                        "properties": {
+                                                            "_$": {
+                                                                "id": "/History/prov/events/items/entity/foundry:en_1/foundry:label/_$",
+                                                                "type": "string"
+                                                            },
+                                                            "type": {
+                                                                "id": "/History/prov/events/items/entity/foundry:en_1/foundry:label/type",
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "foundry:sourceId": {
+                                                        "id": "/History/prov/events/items/entity/foundry:en_1/foundry:sourceId",
+                                                        "properties": {
+                                                            "_$": {
+                                                                "id": "/History/prov/events/items/entity/foundry:en_1/foundry:sourceId/_$",
+                                                                "type": "string"
+                                                            },
+                                                            "type": {
+                                                                "id": "/History/prov/events/items/entity/foundry:en_1/foundry:sourceId/type",
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "foundry:version": {
+                                                        "id": "/History/prov/events/items/entity/foundry:en_1/foundry:version",
+                                                        "properties": {
+                                                            "_$": {
+                                                                "id": "/History/prov/events/items/entity/foundry:en_1/foundry:version/_$",
+                                                                "type": "string"
+                                                            },
+                                                            "type": {
+                                                                "id": "/History/prov/events/items/entity/foundry:en_1/foundry:version/type",
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "foundry:en_2": {
+                                                "id": "/History/prov/events/items/entity/foundry:en_2",
+                                                "properties": {
+                                                    "foundry:UUID": {
+                                                        "id": "/History/prov/events/items/entity/foundry:en_2/foundry:UUID",
+                                                        "properties": {
+                                                            "_$": {
+                                                                "id": "/History/prov/events/items/entity/foundry:en_2/foundry:UUID/_$",
+                                                                "type": "string"
+                                                            },
+                                                            "type": {
+                                                                "id": "/History/prov/events/items/entity/foundry:en_2/foundry:UUID/type",
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "foundry:creationTime": {
+                                                        "id": "/History/prov/events/items/entity/foundry:en_2/foundry:creationTime",
+                                                        "properties": {
+                                                            "_$": {
+                                                                "id": "/History/prov/events/items/entity/foundry:en_2/foundry:creationTime/_$",
+                                                                "type": "string"
+                                                            },
+                                                            "type": {
+                                                                "id": "/History/prov/events/items/entity/foundry:en_2/foundry:creationTime/type",
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "foundry:label": {
+                                                        "id": "/History/prov/events/items/entity/foundry:en_2/foundry:label",
+                                                        "properties": {
+                                                            "_$": {
+                                                                "id": "/History/prov/events/items/entity/foundry:en_2/foundry:label/_$",
+                                                                "type": "string"
+                                                            },
+                                                            "type": {
+                                                                "id": "/History/prov/events/items/entity/foundry:en_2/foundry:label/type",
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "foundry:version": {
+                                                        "id": "/History/prov/events/items/entity/foundry:en_2/foundry:version",
+                                                        "properties": {
+                                                            "_$": {
+                                                                "id": "/History/prov/events/items/entity/foundry:en_2/foundry:version/_$",
+                                                                "type": "string"
+                                                            },
+                                                            "type": {
+                                                                "id": "/History/prov/events/items/entity/foundry:en_2/foundry:version/type",
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "prefix": {
+                                        "id": "/History/prov/events/items/prefix",
+                                        "properties": {
+                                            "foundry": {
+                                                "id": "/History/prov/events/items/prefix/foundry",
+                                                "type": "string"
+                                            },
+                                            "pre_0": {
+                                                "id": "/History/prov/events/items/prefix/pre_0",
+                                                "type": "string"
+                                            },
+                                            "prov": {
+                                                "id": "/History/prov/events/items/prefix/prov",
+                                                "type": "string"
+                                            },
+                                            "xsd": {
+                                                "id": "/History/prov/events/items/prefix/xsd",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "used": {
+                                        "id": "/History/prov/events/items/used",
+                                        "properties": {
+                                            "_:u44": {
+                                                "id": "/History/prov/events/items/used/_:u44",
+                                                "properties": {
+                                                    "prov:activity": {
+                                                        "id": "/History/prov/events/items/used/_:u44/prov:activity",
+                                                        "type": "string"
+                                                    },
+                                                    "prov:entity": {
+                                                        "id": "/History/prov/events/items/used/_:u44/prov:entity",
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "wasGeneratedBy": {
+                                        "id": "/History/prov/events/items/wasGeneratedBy",
+                                        "properties": {
+                                            "_:wGB44": {
+                                                "id": "/History/prov/events/items/wasGeneratedBy/_:wGB44",
+                                                "properties": {
+                                                    "prov:activity": {
+                                                        "id": "/History/prov/events/items/wasGeneratedBy/_:wGB44/prov:activity",
+                                                        "type": "string"
+                                                    },
+                                                    "prov:entity": {
+                                                        "id": "/History/prov/events/items/wasGeneratedBy/_:wGB44/prov:entity",
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "lastProcessedDate": {
+                            "id": "/History/prov/lastProcessedDate",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "OriginalDoc": {
+            "id": "",
+            "properties": {
+                "_@default": {
+                    "id": "/_@default",
+                    "type": "string"
+                },
+                "_@gco": {
+                    "id": "/_@gco",
+                    "type": "string"
+                },
+                "_@gmd": {
+                    "id": "/_@gmd",
+                    "type": "string"
+                },
+                "_@gmi": {
+                    "id": "/_@gmi",
+                    "type": "string"
+                },
+                "_@gml": {
+                    "id": "/_@gml",
+                    "type": "string"
+                },
+                "_@gmx": {
+                    "id": "/_@gmx",
+                    "type": "string"
+                },
+                "_@srv": {
+                    "id": "/_@srv",
+                    "type": "string"
+                },
+                "_@xlink": {
+                    "id": "/_@xlink",
+                    "type": "string"
+                },
+                "_@xml": {
+                    "id": "/_@xml",
+                    "type": "string"
+                },
+                "gmi:MI_Metadata": {
+                    "id": "/gmi:MI_Metadata",
+                    "properties": {
+                        "gmd:contact": {
+                            "id": "/gmi:MI_Metadata/gmd:contact",
+                            "properties": {
+                                "gmd:CI_ResponsibleParty": {
+                                    "id": "/gmi:MI_Metadata/gmd:contact/gmd:CI_ResponsibleParty",
+                                    "properties": {
+                                        "gmd:contactInfo": {
+                                            "id": "/gmi:MI_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo",
+                                            "properties": {
+                                                "gmd:CI_Contact": {
+                                                    "id": "/gmi:MI_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact",
+                                                    "properties": {
+                                                        "gmd:address": {
+                                                            "id": "/gmi:MI_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address",
+                                                            "properties": {
+                                                                "gmd:CI_Address": {
+                                                                    "id": "/gmi:MI_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address",
+                                                                    "properties": {
+                                                                        "gmd:electronicMailAddress": {
+                                                                            "id": "/gmi:MI_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress",
+                                                                            "properties": {
+                                                                                "gco:CharacterString": {
+                                                                                    "id": "/gmi:MI_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString",
+                                                                                    "properties": {
+                                                                                        "_$": {
+                                                                                            "id": "/gmi:MI_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString/_$",
+                                                                                            "type": "string"
+                                                                                        }
+                                                                                    },
+                                                                                    "type": "object"
+                                                                                }
+                                                                            },
+                                                                            "type": "object"
+                                                                        }
+                                                                    },
+                                                                    "type": "object"
+                                                                }
+                                                            },
+                                                            "type": "object"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "gmd:organisationName": {
+                                            "id": "/gmi:MI_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:organisationName",
+                                            "properties": {
+                                                "gco:CharacterString": {
+                                                    "id": "/gmi:MI_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString",
+                                                    "properties": {
+                                                        "_$": {
+                                                            "id": "/gmi:MI_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString/_$",
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "gmd:positionName": {
+                                            "id": "/gmi:MI_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:positionName",
+                                            "properties": {
+                                                "gco:CharacterString": {
+                                                    "id": "/gmi:MI_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString",
+                                                    "properties": {
+                                                        "_$": {
+                                                            "id": "/gmi:MI_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString/_$",
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "gmd:role": {
+                                            "id": "/gmi:MI_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:role",
+                                            "properties": {
+                                                "gmd:CI_RoleCode": {
+                                                    "id": "/gmi:MI_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode",
+                                                    "properties": {
+                                                        "@codeList": {
+                                                            "id": "/gmi:MI_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeList",
+                                                            "type": "string"
+                                                        },
+                                                        "@codeListValue": {
+                                                            "id": "/gmi:MI_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue",
+                                                            "type": "string"
+                                                        },
+                                                        "@codeSpace": {
+                                                            "id": "/gmi:MI_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeSpace",
+                                                            "type": "string"
+                                                        },
+                                                        "_$": {
+                                                            "id": "/gmi:MI_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/_$",
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "gmd:dateStamp": {
+                            "id": "/gmi:MI_Metadata/gmd:dateStamp",
+                            "properties": {
+                                "@gco:nilReason": {
+                                    "id": "/gmi:MI_Metadata/gmd:dateStamp/@gco:nilReason",
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "gmd:distributionInfo": {
+                            "id": "/gmi:MI_Metadata/gmd:distributionInfo",
+                            "properties": {
+                                "gmd:MD_Distribution": {
+                                    "id": "/gmi:MI_Metadata/gmd:distributionInfo/gmd:MD_Distribution",
+                                    "properties": {
+                                        "gmd:distributionFormat": {
+                                            "id": "/gmi:MI_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat",
+                                            "properties": {
+                                                "gmd:MD_Format": {
+                                                    "id": "/gmi:MI_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format",
+                                                    "properties": {
+                                                        "gmd:name": {
+                                                            "id": "/gmi:MI_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:name",
+                                                            "properties": {
+                                                                "gco:CharacterString": {
+                                                                    "id": "/gmi:MI_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:name/gco:CharacterString",
+                                                                    "properties": {
+                                                                        "_$": {
+                                                                            "id": "/gmi:MI_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:name/gco:CharacterString/_$",
+                                                                            "type": "string"
+                                                                        }
+                                                                    },
+                                                                    "type": "object"
+                                                                }
+                                                            },
+                                                            "type": "object"
+                                                        },
+                                                        "gmd:version": {
+                                                            "id": "/gmi:MI_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:version",
+                                                            "properties": {
+                                                                "gco:CharacterString": {
+                                                                    "id": "/gmi:MI_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:version/gco:CharacterString",
+                                                                    "properties": {
+                                                                        "_$": {
+                                                                            "id": "/gmi:MI_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:version/gco:CharacterString/_$",
+                                                                            "type": "string"
+                                                                        }
+                                                                    },
+                                                                    "type": "object"
+                                                                }
+                                                            },
+                                                            "type": "object"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "gmd:transferOptions": {
+                                            "id": "/gmi:MI_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions",
+                                            "properties": {
+                                                "gmd:MD_DigitalTransferOptions": {
+                                                    "id": "/gmi:MI_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions",
+                                                    "properties": {
+                                                        "gmd:onLine": {
+                                                            "id": "/gmi:MI_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine",
+                                                            "properties": {
+                                                                "gmd:CI_OnlineResource": {
+                                                                    "id": "/gmi:MI_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource",
+                                                                    "properties": {
+                                                                        "gmd:function": {
+                                                                            "id": "/gmi:MI_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:function",
+                                                                            "properties": {
+                                                                                "gmd:CI_OnLineFunctionCode": {
+                                                                                    "id": "/gmi:MI_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:function/gmd:CI_OnLineFunctionCode",
+                                                                                    "properties": {
+                                                                                        "@codeList": {
+                                                                                            "id": "/gmi:MI_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:function/gmd:CI_OnLineFunctionCode/@codeList",
+                                                                                            "type": "string"
+                                                                                        },
+                                                                                        "@codeListValue": {
+                                                                                            "id": "/gmi:MI_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:function/gmd:CI_OnLineFunctionCode/@codeListValue",
+                                                                                            "type": "string"
+                                                                                        }
+                                                                                    },
+                                                                                    "type": "object"
+                                                                                }
+                                                                            },
+                                                                            "type": "object"
+                                                                        },
+                                                                        "gmd:linkage": {
+                                                                            "id": "/gmi:MI_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage",
+                                                                            "properties": {
+                                                                                "gmd:URL": {
+                                                                                    "id": "/gmi:MI_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage/gmd:URL",
+                                                                                    "properties": {
+                                                                                        "_$": {
+                                                                                            "id": "/gmi:MI_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage/gmd:URL/_$",
+                                                                                            "type": "string"
+                                                                                        }
+                                                                                    },
+                                                                                    "type": "object"
+                                                                                }
+                                                                            },
+                                                                            "type": "object"
+                                                                        },
+                                                                        "gmd:name": {
+                                                                            "id": "/gmi:MI_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:name",
+                                                                            "properties": {
+                                                                                "gco:CharacterString": {
+                                                                                    "id": "/gmi:MI_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:name/gco:CharacterString",
+                                                                                    "properties": {
+                                                                                        "_$": {
+                                                                                            "id": "/gmi:MI_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:name/gco:CharacterString/_$",
+                                                                                            "type": "string"
+                                                                                        }
+                                                                                    },
+                                                                                    "type": "object"
+                                                                                }
+                                                                            },
+                                                                            "type": "object"
+                                                                        }
+                                                                    },
+                                                                    "type": "object"
+                                                                }
+                                                            },
+                                                            "type": "object"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "gmd:fileIdentifier": {
+                            "id": "/gmi:MI_Metadata/gmd:fileIdentifier",
+                            "properties": {
+                                "gco:CharacterString": {
+                                    "id": "/gmi:MI_Metadata/gmd:fileIdentifier/gco:CharacterString",
+                                    "properties": {
+                                        "_$": {
+                                            "id": "/gmi:MI_Metadata/gmd:fileIdentifier/gco:CharacterString/_$",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "gmd:identificationInfo": {
+                            "id": "/gmi:MI_Metadata/gmd:identificationInfo",
+                            "properties": {
+                                "gmd:MD_DataIdentification": {
+                                    "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification",
+                                    "properties": {
+                                        "gmd:abstract": {
+                                            "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:abstract",
+                                            "properties": {
+                                                "gco:CharacterString": {
+                                                    "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:abstract/gco:CharacterString",
+                                                    "properties": {
+                                                        "_$": {
+                                                            "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:abstract/gco:CharacterString/_$",
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "gmd:citation": {
+                                            "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation",
+                                            "properties": {
+                                                "gmd:CI_Citation": {
+                                                    "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation",
+                                                    "properties": {
+                                                        "gmd:date": {
+                                                            "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date",
+                                                            "properties": {
+                                                                "gmd:CI_Date": {
+                                                                    "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date",
+                                                                    "properties": {
+                                                                        "gmd:date": {
+                                                                            "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:date",
+                                                                            "properties": {
+                                                                                "gco:Date": {
+                                                                                    "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:date/gco:Date",
+                                                                                    "properties": {
+                                                                                        "_$": {
+                                                                                            "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:date/gco:Date/_$",
+                                                                                            "type": "string"
+                                                                                        }
+                                                                                    },
+                                                                                    "type": "object"
+                                                                                }
+                                                                            },
+                                                                            "type": "object"
+                                                                        },
+                                                                        "gmd:dateType": {
+                                                                            "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType",
+                                                                            "properties": {
+                                                                                "gmd:CI_DateTypeCode": {
+                                                                                    "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode",
+                                                                                    "properties": {
+                                                                                        "@codeList": {
+                                                                                            "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode/@codeList",
+                                                                                            "type": "string"
+                                                                                        },
+                                                                                        "@codeListValue": {
+                                                                                            "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode/@codeListValue",
+                                                                                            "type": "string"
+                                                                                        },
+                                                                                        "@codeSpace": {
+                                                                                            "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode/@codeSpace",
+                                                                                            "type": "string"
+                                                                                        },
+                                                                                        "_$": {
+                                                                                            "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode/_$",
+                                                                                            "type": "string"
+                                                                                        }
+                                                                                    },
+                                                                                    "type": "object"
+                                                                                }
+                                                                            },
+                                                                            "type": "object"
+                                                                        }
+                                                                    },
+                                                                    "type": "object"
+                                                                }
+                                                            },
+                                                            "type": "object"
+                                                        },
+                                                        "gmd:title": {
+                                                            "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title",
+                                                            "properties": {
+                                                                "gco:CharacterString": {
+                                                                    "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title/gco:CharacterString",
+                                                                    "properties": {
+                                                                        "_$": {
+                                                                            "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title/gco:CharacterString/_$",
+                                                                            "type": "string"
+                                                                        }
+                                                                    },
+                                                                    "type": "object"
+                                                                }
+                                                            },
+                                                            "type": "object"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "gmd:descriptiveKeywords": {
+                                            "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords",
+                                            "items": {
+                                                "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items",
+                                                "properties": {
+                                                    "gmd:MD_Keywords": {
+                                                        "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords",
+                                                        "properties": {
+                                                            "gmd:keyword": {
+                                                                "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:keyword",
+                                                                "items": {
+                                                                    "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:keyword/items",
+                                                                    "properties": {
+                                                                        "gco:CharacterString": {
+                                                                            "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:keyword/items/gco:CharacterString",
+                                                                            "properties": {
+                                                                                "_$": {
+                                                                                    "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:keyword/items/gco:CharacterString/_$",
+                                                                                    "type": "string"
+                                                                                }
+                                                                            },
+                                                                            "type": "object"
+                                                                        }
+                                                                    },
+                                                                    "type": "object"
+                                                                },
+                                                                "type": "array"
+                                                            },
+                                                            "gmd:thesaurusName": {
+                                                                "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:thesaurusName",
+                                                                "properties": {
+                                                                    "gmd:CI_Citation": {
+                                                                        "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation",
+                                                                        "properties": {
+                                                                            "gmd:date": {
+                                                                                "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:date",
+                                                                                "properties": {
+                                                                                    "gmd:CI_Date": {
+                                                                                        "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date",
+                                                                                        "properties": {
+                                                                                            "gmd:date": {
+                                                                                                "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:date",
+                                                                                                "properties": {
+                                                                                                    "gco:Date": {
+                                                                                                        "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:date/gco:Date",
+                                                                                                        "properties": {
+                                                                                                            "_$": {
+                                                                                                                "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:date/gco:Date/_$",
+                                                                                                                "type": "string"
+                                                                                                            }
+                                                                                                        },
+                                                                                                        "type": "object"
+                                                                                                    }
+                                                                                                },
+                                                                                                "type": "object"
+                                                                                            },
+                                                                                            "gmd:dateType": {
+                                                                                                "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType",
+                                                                                                "properties": {
+                                                                                                    "gmd:CI_DateTypeCode": {
+                                                                                                        "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode",
+                                                                                                        "properties": {
+                                                                                                            "@codeList": {
+                                                                                                                "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode/@codeList",
+                                                                                                                "type": "string"
+                                                                                                            },
+                                                                                                            "@codeListValue": {
+                                                                                                                "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode/@codeListValue",
+                                                                                                                "type": "string"
+                                                                                                            }
+                                                                                                        },
+                                                                                                        "type": "object"
+                                                                                                    }
+                                                                                                },
+                                                                                                "type": "object"
+                                                                                            }
+                                                                                        },
+                                                                                        "type": "object"
+                                                                                    }
+                                                                                },
+                                                                                "type": "object"
+                                                                            },
+                                                                            "gmd:title": {
+                                                                                "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title",
+                                                                                "properties": {
+                                                                                    "gco:CharacterString": {
+                                                                                        "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString",
+                                                                                        "properties": {
+                                                                                            "_$": {
+                                                                                                "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString/_$",
+                                                                                                "type": "string"
+                                                                                            }
+                                                                                        },
+                                                                                        "type": "object"
+                                                                                    }
+                                                                                },
+                                                                                "type": "object"
+                                                                            }
+                                                                        },
+                                                                        "type": "object"
+                                                                    }
+                                                                },
+                                                                "type": "object"
+                                                            },
+                                                            "gmd:type": {
+                                                                "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:type",
+                                                                "properties": {
+                                                                    "gmd:MD_KeywordTypeCode": {
+                                                                        "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode",
+                                                                        "properties": {
+                                                                            "@codeList": {
+                                                                                "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode/@codeList",
+                                                                                "type": "string"
+                                                                            },
+                                                                            "@codeListValue": {
+                                                                                "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode/@codeListValue",
+                                                                                "type": "string"
+                                                                            },
+                                                                            "@codeSpace": {
+                                                                                "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode/@codeSpace",
+                                                                                "type": "string"
+                                                                            },
+                                                                            "_$": {
+                                                                                "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/items/gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode/_$",
+                                                                                "type": "string"
+                                                                            }
+                                                                        },
+                                                                        "type": "object"
+                                                                    }
+                                                                },
+                                                                "type": "object"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "type": "array"
+                                        },
+                                        "gmd:language": {
+                                            "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:language",
+                                            "properties": {
+                                                "gco:CharacterString": {
+                                                    "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:language/gco:CharacterString",
+                                                    "properties": {
+                                                        "_$": {
+                                                            "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:language/gco:CharacterString/_$",
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "gmd:topicCategory": {
+                                            "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:topicCategory",
+                                            "items": {
+                                                "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:topicCategory/items",
+                                                "properties": {
+                                                    "gmd:MD_TopicCategoryCode": {
+                                                        "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:topicCategory/items/gmd:MD_TopicCategoryCode",
+                                                        "properties": {
+                                                            "_$": {
+                                                                "id": "/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:topicCategory/items/gmd:MD_TopicCategoryCode/_$",
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "type": "array"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "gmd:language": {
+                            "id": "/gmi:MI_Metadata/gmd:language",
+                            "properties": {
+                                "gco:CharacterString": {
+                                    "id": "/gmi:MI_Metadata/gmd:language/gco:CharacterString",
+                                    "properties": {
+                                        "_$": {
+                                            "id": "/gmi:MI_Metadata/gmd:language/gco:CharacterString/_$",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "gmd:metadataStandardVersion": {
+                            "id": "/gmi:MI_Metadata/gmd:metadataStandardVersion",
+                            "properties": {
+                                "gco:CharacterString": {
+                                    "id": "/gmi:MI_Metadata/gmd:metadataStandardVersion/gco:CharacterString",
+                                    "properties": {
+                                        "_$": {
+                                            "id": "/gmi:MI_Metadata/gmd:metadataStandardVersion/gco:CharacterString/_$",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "Processing": {
+            "id": "/Processing",
+            "properties": {
+                "docId": {
+                    "id": "/Processing/docId",
+                    "type": "string"
+                },
+                "status": {
+                    "id": "/Processing/status",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "SourceInfo": {
+            "id": "/SourceInfo",
+            "properties": {
+                "DataSource": {
+                    "id": "/SourceInfo/DataSource",
+                    "type": "string"
+                },
+                "Name": {
+                    "id": "/SourceInfo/Name",
+                    "type": "string"
+                },
+                "SourceID": {
+                    "id": "/SourceInfo/SourceID",
+                    "type": "string"
+                },
+                "ViewID": {
+                    "id": "/SourceInfo/ViewID",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "Version": {
+            "id": "/Version",
+            "type": "integer"
+        },
+        "_id": {
+            "id": "/_id",
+            "type": "string"
+        },
+        "primaryKey": {
+            "id": "/primaryKey",
+            "type": "string"
+        }
+    },
+    "type": "object"
+}
