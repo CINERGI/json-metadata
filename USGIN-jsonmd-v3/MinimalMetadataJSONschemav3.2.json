@@ -41,7 +41,7 @@
             "properties": {
                 "jmd:metadataIdentifier": {
                     "type": "string",
-                    "description": "uri that identifies this metadata record, default is UUID type URN, in which case the URN:UUID: prefix is left off. If some other identifier scheme is used, an appropriate prefix should specifiy the identifier scheme (e.g. DOI, ISSN, ARK...)",
+                    "description": "unique identifier for the metadata record (as distinct from the resource it describes), default is UUID type URN, in which case the URN:UUID: prefix is left off. If some other identifier scheme is used, an appropriate prefix should specifiy the identifier scheme (e.g. DOI, ISSN, ARK...)",
                     "format": "uri",
                     "search_paths": [
                         {
@@ -52,8 +52,7 @@
                             "schema": "DataCite v3",
                             "path": "missing"
                     }
-                        ],
-                    "description": "unique identifier for the metadata record (as distinct from the resource it describes)"
+                        ]
                 },
                 "jmd:metadataLastUpdate": {
                     "type": "string",
@@ -1371,19 +1370,16 @@
                             },
                             "jmd:formatAmendmentNumber": {
                                 "type": "string",
-                                "description": "additioanl version information if applicable",
-                                "description": "version number of format",
+                                "description": "version number of format; additional version information if applicable",
                                 "search_paths": [
-                                    {
-                                        "schema": "ISO 19139",
+                                    {   "schema": "ISO 19139",
                                         "path": "./MD_Format/gmd:amendmentNumber/gco:CharacterString"
-                                                        }
+                                    }
                                                     ]
                             },
                             "jmd:formatSpecification": {
                                 "type": "string",
-                                "description": "Name of a subset, profile, or product specification of the format",
-                                "description": "version number of format",
+                                "description": "version number of format; Name of a subset, profile, or product specification of the format",
                                 "search_paths": [
                                     {
                                         "schema": "ISO 19139",
